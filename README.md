@@ -1,6 +1,6 @@
 # Magic Maker Studio – Creative Learning Sandbox
 
-## 📅 Week 1 – Problem Understanding & Project Setup
+## Week 1 – Problem Understanding & Project Setup
 
 ### Objective
 Establish a clear learning problem, understand target learners, and set up the project workspace for effective collaboration and rapid prototyping during the 6-week bootcamp and hackathon.
@@ -8,10 +8,10 @@ Establish a clear learning problem, understand target learners, and set up the p
 ---
 
 ### Key Activities
-- Studied foundational concepts of instructional design and digital educational content
-- Analyzed existing educational platforms to identify gaps in child-friendly creative learning tools
-- Defined the core learning problem and target learner group
-- Set up GitHub for version control and Notion for planning and task tracking
+- Studied foundational concepts of instructional design and digital educational content  
+- Analyzed existing educational platforms to identify gaps in child-friendly creative learning tools  
+- Defined the core learning problem and target learner group  
+- Set up GitHub for version control and Notion for planning and task tracking  
 
 ---
 
@@ -24,17 +24,17 @@ Children often engage with digital content passively and lack safe, age-appropri
 ---
 
 ### Target Learners
-- Children aged **8–13**
-- Early to developing literacy levels
-- Learners who benefit from guided interaction rather than open-ended tools
+- Children aged **8–13**  
+- Early to developing literacy levels  
+- Learners who benefit from guided interaction rather than open-ended tools  
 
 ---
 
 ### Initial Feature Scope
-- Guided story and poem creation (quiz-based flow)
-- AI-assisted grammar and vocabulary feedback (prototype level)
-- Magic Library for sharing creations with moderation
-- Simple, accessible, child-friendly UI
+- Guided story and poem creation (quiz-based flow)  
+- AI-assisted grammar and vocabulary feedback (prototype level)  
+- Magic Library for sharing creations with moderation  
+- Simple, accessible, child-friendly UI  
 
 ---
 
