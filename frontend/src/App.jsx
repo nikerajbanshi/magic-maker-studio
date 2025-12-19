@@ -15,7 +15,7 @@ function App() {
         {/* This is where the Pages (Landing, Dashboard, etc.) will be injected */}
         <div style={{ padding: '20px', border: '1px dashed #ccc' }}>
           <h2>Creative Learning Sandbox</h2>
-          <p>The frontend scaffolding is ready for Sunday review.</p>
+          <p>Hello</p>
         </div>
       </main>
 
