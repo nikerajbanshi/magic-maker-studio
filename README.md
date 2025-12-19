@@ -42,4 +42,4 @@ magic-maker-studio/
 ├── initial_scope.md      # Early feature and scope definition
 ├── CONTRIBUTING.md       # Contribution and setup guidelines
 ├── .gitignore            # Environment and dependency exclusions
-└── README.md             # Project overview (this file)
+└── README.md             # Project overview
