@@ -1,15 +1,35 @@
-# Python
+# --- Python / FastAPI ---
 __pycache__/
-*.pyc
-env/
+*.py[cod]
+*$py.class
+.venv
 venv/
-*.sqlite3
-
-# Node / React
-node_modules/
+ENV/
+.env
 build/
 dist/
-.env
+*.egg-info/
 
-# Others
+# --- Node / React ---
+node_modules/
+.pnp
+.pnp.js
+coverage/
+build/
+.next/
+out/
+build-static/
 .DS_Store
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# --- Editors / IDEs ---
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# --- System ---
+.DS_Store
+Thumbs.db
