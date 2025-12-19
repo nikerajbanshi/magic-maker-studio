@@ -34,7 +34,7 @@ The backend and frontend are fully decoupled to support independent development 
 ---
 
 ## Repository Structure
-
+```text
 magic-maker-studio/
 ├── backend/              # FastAPI backend application
 ├── frontend/             # React frontend (Vite)
