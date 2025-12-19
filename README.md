@@ -1,57 +1,45 @@
-# Magic Maker Studio – Creative Learning Sandbox
+# Magic Maker Studio  
+**Creative Learning Sandbox**
 
-## Week 1 – Problem Understanding & Project Setup
+Magic Maker Studio is a creative learning sandbox designed to support interactive, child-friendly educational experiences. The platform emphasizes guided creativity, literacy development, and safe content sharing within a structured digital environment.
 
-### Objective
-Establish a clear learning problem, understand target learners, and set up the project workspace for effective collaboration and rapid prototyping during the 6-week bootcamp and hackathon.
-
----
-
-### Key Activities
-- Studied foundational concepts of instructional design and digital educational content  
-- Analyzed existing educational platforms to identify gaps in child-friendly creative learning tools  
-- Defined the core learning problem and target learner group  
-- Set up GitHub for version control and Notion for planning and task tracking  
+This repository establishes a **scalable full-stack foundation** using a decoupled architecture, prioritizing clean project organization, collaborative workflows, and future extensibility.
 
 ---
 
-### Problem Definition
-Children often engage with digital content passively and lack safe, age-appropriate platforms that encourage creative expression and literacy development. Many existing creative tools are either too complex or lack proper moderation for younger learners.
+## Project Context
 
-**Proposed Solution:**  
-**Magic Maker Studio** — a guided creative learning sandbox where children create stories, poems, and characters through structured, quiz-style choices, supported by AI-assisted reading and writing feedback, and shared safely via a moderated Magic Library.
+This repository represents the **Week 2 technical milestone** of a 6-week bootcamp and hackathon.
 
----
+**Primary focus this week:**
+- Git & GitHub project management
+- Python backend development
+- API fundamentals
+- Frontend scaffolding
+- Clear documentation and structure
 
-### Target Learners
-- Children aged **8–13**  
-- Early to developing literacy levels  
-- Learners who benefit from guided interaction rather than open-ended tools  
-
----
-
-### Initial Feature Scope
-- Guided story and poem creation (quiz-based flow)  
-- AI-assisted grammar and vocabulary feedback (prototype level)  
-- Magic Library for sharing creations with moderation  
-- Simple, accessible, child-friendly UI  
+Feature completeness is intentionally deferred in favor of architectural clarity and long-term feasibility.
 
 ---
 
-### Deliverables Completed
-- ✅ Project idea finalized and documented  
-- ✅ GitHub repository initialized with basic structure  
-- ✅ Notion workspace created for planning and progress tracking  
-- ✅ Learning problem and learner needs clearly defined  
+## Technical Architecture
+
+- **Backend:** Python 3.13, FastAPI  
+- **Frontend:** React with Vite  
+- **API Design:** RESTful endpoints with automatic OpenAPI documentation  
+- **Workflow:** Feature-based branching with incremental commits  
+
+The backend and frontend are fully decoupled to support independent development and future scaling.
 
 ---
 
-### Outcome
-By the end of Week 1, the project is grounded in a well-defined learning problem, aligned with learner needs, and supported by an organized workflow ready for rapid prototyping in the following weeks.
+## Repository Structure
 
----
-
-### Next Focus (Week 2)
-- Define user journeys and interaction flows  
-- Finalize prototype feature prioritization  
-- Begin low-fidelity UI and system design  
+magic-maker-studio/
+├── backend/              # FastAPI backend application
+├── frontend/             # React frontend (Vite)
+├── docs/                 # Technical notes and planning documents 
+├── initial_scope.md      # Early feature and scope definition
+├── CONTRIBUTING.md       # Contribution and setup guidelines
+├── .gitignore            # Environment and dependency exclusions
+└── README.md             # Project overview (this file)
