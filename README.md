@@ -9,7 +9,7 @@ This repository establishes a **scalable full-stack foundation** using a decoupl
 
 ## Project Context
 
-This repository represents the **Week 2 technical milestone** of a 6-week bootcamp and hackathon.
+This repository represents the **Week 2** of a 6-week bootcamp and hackathon.
 
 **Primary focus this week:**
 - Git & GitHub project management
