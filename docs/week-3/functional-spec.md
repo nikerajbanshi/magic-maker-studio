@@ -1,5 +1,5 @@
 # Functional Specification Document  
-**Project:** SoundSteps (Magic Maker Studio v1.1)  
+**Project:** Magic Maker Studio v1.1  
 **Team:** Team A  
 **Authors:** Dikshya Rai, Binam Poudel, Nikesh Rajbanshi  
 **Bootcamp Week:** Week 3  
@@ -10,7 +10,7 @@
 
 ## 1. Overview
 
-This document defines the functional specification for **SoundSteps**, a mobile-first, gamified phonics and pronunciation learning application.  
+This document defines the functional specification for **Magic Maker Studio v1.1**, a mobile-first, gamified phonics and pronunciation learning application.  
 The specification is aligned with Week 3 learning outcomes, emphasizing:
 
 - Scenario-based educational content planning  
@@ -41,7 +41,7 @@ The system design and features are informed by the following Week 3 resources:
 
 ## 3. Project Vision
 
-SoundSteps applies the **Magic Maker learning engine** to guide learners through four stages of competence:
+The application Magic Maker Studio v1.1 aims to guide learners through four stages of competence:
 
 1. Unconscious Incompetence  
 2. Conscious Incompetence  
@@ -210,4 +210,4 @@ The system progressively develops phonics awareness, listening accuracy, and con
 
 ## 7. Conclusion
 
-This functional specification reflects the long-term vision of SoundSteps and establishes a structured reference for UI design, development, and hackathon execution.
+This functional specification reflects the long-term vision of the application and establishes a structured reference for UI design, development, and hackathon execution.
