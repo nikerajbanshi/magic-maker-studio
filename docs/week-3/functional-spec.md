@@ -1,225 +1,213 @@
 # Functional Specification Document  
-**Project Name:** SoundSteps (Magic Maker Studio v(1.1))  
-**Team:** Team A
+**Project:** SoundSteps (Magic Maker Studio v1.1)  
+**Team:** Team A  
 **Authors:** Dikshya Rai, Binam Poudel, Nikesh Rajbanshi  
 **Bootcamp Week:** Week 3  
 **Repository:** https://github.com/nikerajbanshi/magic-maker-studio  
+**Date:** 2025-12-27  
 
 ---
 
-## 1. Introduction
+## 1. Overview
 
-This document defines the functional specification for **SoundSteps**, a gamified phonics and pronunciation learning application developed as part of the Bootcamp & Hackathon. The system is designed to support early-stage language learners by guiding them through structured phonics acquisition using interactive, scenario-based learning experiences.
+This document defines the functional specification for **SoundSteps**, a mobile-first, gamified phonics and pronunciation learning application.  
+The specification is aligned with Week 3 learning outcomes, emphasizing:
 
-The specification serves as a foundational reference for design, development, testing, and iteration throughout the remainder of the project lifecycle.
+- Scenario-based educational content planning  
+- Mobile UI layout and design system thinking  
+- Clear definition of system features, interactions, and priorities  
 
----
+Prior to this week, the team successfully established a **working project skeleton**, including:
+- Initial FastAPI backend with test endpoints
+- Frontend project structure with basic routing and components
+- Early integration testing between frontend and backend
 
-## 2. Project Vision
-
-SoundSteps leverages the **Magic Maker learning engine** to transition learners through the four stages of competence:
-- Unconscious Incompetence  
-- Conscious Incompetence  
-- Conscious Competence  
-- Unconscious Competence  
-
-The application integrates phonics instruction, auditory discrimination, and contextual practice through progressive, gamified modules.
+This document serves as the foundation for future UI design, development iterations, and hackathon implementation.
 
 ---
 
-## 3. Target Users
+## 2. Alignment with Week 3 Learning Materials
 
-- Early language learners (children and beginner ESL learners)
-- Educators seeking interactive phonics tools
-- Self-guided learners requiring auditory reinforcement
+The system design and features are informed by the following Week 3 resources:
 
----
-
-## 4. Core System Features
-
-### 4.1 Interactive Phonics Flashcards (Remember Phase)
-
-**Description:**  
-A digital A–Z phonics flashcard system presenting isolated phonemes paired with visual anchors to establish foundational sound recognition.
-
-**User Scenario:**  
-The learner selects a letter card (e.g., “A”) and hears its phoneme while viewing an animated visual representation.
-
-**Inputs:**  
-- User tap gesture  
-- Selected letter identifier  
-
-**Outputs:**  
-- Audio playback of phoneme  
-- Visual animation/highlight  
-
-**Required Screens:**  
-- Flashcard Deck Screen  
-
-**Priority:**  
-- Must-have  
+- **Scenario Writing & e-learning Scenarios:**  
+  Features are defined using learner-centered scenarios that describe real interactions.
+- **Generating Storyboards:**  
+  Each feature explicitly identifies required screens, enabling direct translation into storyboards.
+- **Mobile UI Design & CSS/Flexbox:**  
+  All features assume responsive, mobile-first layouts suitable for Flexbox-based UI implementation.
 
 ---
 
-### 4.2 Phonetic Blending Slider (Understand Phase)
+## 3. Project Vision
 
-**Description:**  
-An interactive blending interface allowing users to control phoneme blending speed to understand sound-to-word formation.
+SoundSteps applies the **Magic Maker learning engine** to guide learners through four stages of competence:
 
-**User Scenario:**  
-The learner drags a slider across the word “fit” to hear segmented phonemes and then a fully blended pronunciation.
+1. Unconscious Incompetence  
+2. Conscious Incompetence  
+3. Conscious Competence  
+4. Unconscious Competence  
 
-**Inputs:**  
-- Drag/swipe gesture  
-- Gesture speed  
-
-**Outputs:**  
-- Variable-speed audio playback  
-- Visual blending indicators  
-
-**Required Screens:**  
-- Blending Practice Screen  
-
-**Priority:**  
-- Must-have  
+The system progressively develops phonics awareness, listening accuracy, and contextual pronunciation through interactive, game-based modules.
 
 ---
 
-### 4.3 Hungry Monster Game (Apply Phase)
+## 4. Target Users
 
-**Description:**  
-A game-based reinforcement activity providing immediate feedback on listening comprehension.
-
-**User Scenario:**  
-After hearing a word, the learner drags the correct option to the monster. Correct selections trigger positive animations.
-
-**Inputs:**  
-- Drag-and-drop gesture  
-- Selected word object  
-
-**Outputs:**  
-- Animation feedback  
-- Sound effects  
-- Score updates  
-
-**Required Screens:**  
-- Game Screen  
-
-**Priority:**  
-- Must-have  
+| User Group | Description |
+|----------|-------------|
+| Early Learners | Children learning foundational phonics |
+| ESL Beginners | Non-native speakers developing pronunciation skills |
+| Educators | Teachers seeking structured phonics tools |
 
 ---
 
-### 4.4 Minimal Pair Sorter (Analyze Phase)
+## 5. Core System Features
 
-**Description:**  
-A comparative tool for distinguishing similar phonemes (e.g., long vs. short vowels).
+### Feature Summary Table
 
-**User Scenario:**  
-The learner hears a word and sorts it into the correct phoneme category bucket.
-
-**Inputs:**  
-- Tap or drag selection  
-
-**Outputs:**  
-- Correct/incorrect visual indicators  
-- Explanatory feedback  
-
-**Required Screens:**  
-- Analysis / Sorting Screen  
-
-**Priority:**  
-- Must-have  
+| Feature | Phase | Priority |
+|------|------|---------|
+| Interactive Phonics Flashcards | Remember | Must-have |
+| Phonetic Blending Slider | Understand | Must-have |
+| Hungry Monster Game | Apply | Must-have |
+| Minimal Pair Sorter | Analyze | Must-have |
+| Contextual Story Mode | Create | Nice-to-have |
+| Competence Dashboard | Monitor | Must-have |
+| User Authentication | System | Must-have |
 
 ---
 
-### 4.5 Contextual Story Mode (Create Phase)
+### 5.1 Interactive Phonics Flashcards
 
-**Description:**  
-An interactive storytelling environment where learners identify target sounds within continuous speech.
-
-**User Scenario:**  
-The learner taps the screen whenever a target phoneme occurs in a narrated story.
-
-**Inputs:**  
-- Time-synchronized user taps  
-
-**Outputs:**  
-- Highlighted text  
-- Real-time scoring feedback  
-
-**Required Screens:**  
-- Story Reader Screen  
-
-**Priority:**  
-- Nice-to-have  
+| Element | Details |
+|------|--------|
+| Description | A–Z flashcards pairing phonemes with visual anchors |
+| User Scenario | Learner taps a letter and hears the phoneme with animation |
+| Inputs | Letter ID, tap gesture |
+| Outputs | Phoneme audio, animated visual |
+| Required Screens | Flashcard Deck Screen |
+| Acceptance Criteria | Correct audio plays within 300ms for each letter |
+| Success Metrics | ≥90% successful playback rate |
+| Accessibility | Large tap targets, replay button |
+| Privacy / Data Retention | No personal data stored |
+| Priority | Must-have |
 
 ---
 
-### 4.6 Competence Dashboard
+### 5.2 Phonetic Blending Slider
 
-**Description:**  
-A progress visualization module showing learner advancement across phonics categories and competence levels.
-
-**User Scenario:**  
-The learner reviews progress and achievement badges after completing sessions.
-
-**Inputs:**  
-- System-generated performance data  
-
-**Outputs:**  
-- Progress bars  
-- Competence level indicators  
-- Achievement badges  
-
-**Required Screens:**  
-- User Dashboard  
-
-**Priority:**  
-- Must-have  
+| Element | Details |
+|------|--------|
+| Description | Slider-controlled blending of phonemes into words |
+| User Scenario | Learner drags slider to hear segmented vs blended sounds |
+| Inputs | Drag position, gesture speed |
+| Outputs | Variable-speed audio, visual blending cues |
+| Required Screens | Blending Practice Screen |
+| Acceptance Criteria | Audio responds accurately to slider movement |
+| Success Metrics | Reduced blending errors over time |
+| Accessibility | Visual indicators for audio speed |
+| Privacy / Data Retention | Session-level performance data only |
+| Priority | Must-have |
 
 ---
 
-### 4.7 User Authentication
+### 5.3 Hungry Monster Game
 
-**Description:**  
-A secure authentication mechanism enabling persistent user profiles and progress tracking.
-
-**User Scenario:**  
-A first-time user registers and later resumes learning from saved progress.
-
-**Inputs:**  
-- Email and password or OAuth token  
-
-**Outputs:**  
-- Authentication token  
-- Persistent user session  
-
-**Required Screens:**  
-- Login / Registration Screens  
-
-**Priority:**  
-- Must-have  
+| Element | Details |
+|------|--------|
+| Description | Gamified listening comprehension with feedback |
+| User Scenario | Learner drags correct word to monster |
+| Inputs | Drag-and-drop word selection |
+| Outputs | Animations, sound effects, score update |
+| Required Screens | Game Screen |
+| Acceptance Criteria | Correct choices trigger positive feedback |
+| Success Metrics | Accuracy improvement across levels |
+| Accessibility | Non-color feedback icons |
+| Privacy / Data Retention | Scores stored under anonymized user ID |
+| Priority | Must-have |
 
 ---
 
-## 5. Non-Functional Considerations
+### 5.4 Minimal Pair Sorter
 
-- **Scalability:** Backend APIs designed for modular expansion  
-- **Security:** Token-based authentication and input validation  
-- **Accessibility:** Visual and auditory feedback for diverse learners  
-- **Maintainability:** Clear separation of concerns (API, services, UI)
+| Element | Details |
+|------|--------|
+| Description | Tool for distinguishing similar phonemes |
+| User Scenario | Learner sorts word into correct phoneme bucket |
+| Inputs | Tap or drag selection |
+| Outputs | Correct/incorrect indicators, explanations |
+| Required Screens | Analysis Screen |
+| Acceptance Criteria | Accurate phoneme classification |
+| Success Metrics | Decrease in repeated misclassification |
+| Accessibility | Audio + text explanations |
+| Privacy / Data Retention | No audio recordings retained |
+| Priority | Must-have |
 
 ---
 
-## 6. Future Extensions
+### 5.5 Contextual Story Mode
 
-- Adaptive difficulty based on learner performance  
-- Teacher analytics dashboard  
-- Offline phonics practice mode  
+| Element | Details |
+|------|--------|
+| Description | Interactive story-based phoneme detection |
+| User Scenario | Learner taps when hearing target sound |
+| Inputs | Time-synced taps |
+| Outputs | Highlighted text, counters |
+| Required Screens | Story Reader Screen |
+| Acceptance Criteria | Tap timing within tolerance window |
+| Success Metrics | Detection accuracy per story |
+| Accessibility | Subtitles, speed control |
+| Privacy / Data Retention | Interaction data without identifiers |
+| Priority | Nice-to-have |
+
+---
+
+### 5.6 Competence Dashboard
+
+| Element | Details |
+|------|--------|
+| Description | Visualizes learner progress and mastery |
+| User Scenario | Learner reviews progress and badges |
+| Inputs | System performance data |
+| Outputs | Progress bars, badges |
+| Required Screens | Dashboard |
+| Acceptance Criteria | Progress reflects latest session |
+| Success Metrics | Weekly dashboard usage |
+| Accessibility | Screen-reader-friendly summaries |
+| Privacy / Data Retention | Aggregated learning data |
+| Priority | Must-have |
+
+---
+
+### 5.7 User Authentication
+
+| Element | Details |
+|------|--------|
+| Description | Secure login and profile persistence |
+| User Scenario | User registers and resumes progress |
+| Inputs | Email/password or OAuth |
+| Outputs | Auth token, session |
+| Required Screens | Login / Signup |
+| Acceptance Criteria | Encrypted credentials, valid sessions |
+| Success Metrics | Authentication success rate |
+| Accessibility | Keyboard navigation, clear errors |
+| Privacy / Data Retention | COPPA-aligned minimal data storage |
+| Priority | Must-have |
+
+---
+
+## 6. Non-Functional Requirements
+
+| Category | Requirement |
+|-------|-------------|
+| Scalability | Modular FastAPI services |
+| Security | Token-based auth, input validation |
+| Accessibility | WCAG-aligned UI |
+| Maintainability | Clear separation of concerns |
 
 ---
 
 ## 7. Conclusion
 
-This functional specification establishes the baseline requirements for SoundSteps and will guide iterative development throughout the Bootcamp & Hackathon. Subsequent design and implementation decisions will reference this document to ensure pedagogical alignment and technical consistency.
+This functional specification reflects the long-term vision of SoundSteps and establishes a structured reference for UI design, development, and hackathon execution.
