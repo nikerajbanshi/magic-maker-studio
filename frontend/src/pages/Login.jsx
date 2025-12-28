@@ -1,1 +1,14 @@
-export default function Login() { return (<div><h1>Login Page</h1><p>Magic Maker Studio Scaffolding</p></div>); }
+import { useNavigate } from "react-router-dom";
+
+export default function Login() {
+  const navigate = useNavigate();
+
+  return (
+    <div>
+      <h2>Login</h2>
+      <button onClick={() => navigate("/dashboard")}>
+        Login (Mock)
+      </button>
+    </div>
+  );
+}
