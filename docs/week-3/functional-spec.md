@@ -1,5 +1,5 @@
 # Functional Specification Document  
-**Project:** SoundSteps: Magic Maker Studio v1.1  
+**Project:** SoundSteps (Magic Maker Studio v1.1)  
 **Team:** Team A  
 **Authors:** Dikshya Rai, Binam Poudel, Nikesh Rajbanshi  
 **Bootcamp Week:** Week 3  
@@ -68,13 +68,13 @@ The system progressively develops phonics awareness, listening accuracy, and con
 
 | Feature | Phase | Priority |
 |------|------|---------|
-| Interactive Phonics Flashcards | Remember | Must-have |
-| Phonetic Blending Slider | Understand | Must-have |
-| Hungry Monster Game | Apply | Must-have |
-| Minimal Pair Sorter | Analyze | Must-have |
-| Contextual Story Mode | Create | Nice-to-have |
-| Competence Dashboard | Monitor | Must-have |
 | User Authentication | System | Must-have |
+| Interactive Phonics Flashcards | Remember | Must-have |
+| Phonetic Blending Slider (Sound It Out) | Understand | Must-have |
+| Story Game | Apply | Must-have |
+| Minimal Pair Sorter | Analyze | Nice-to-have |
+| Contextual Story Mode | Create | Nice-to-have |
+| Competence Dashboard | Monitor | Nice-to-have |
 
 ---
 
@@ -95,7 +95,7 @@ The system progressively develops phonics awareness, listening accuracy, and con
 
 ---
 
-### 5.2 Phonetic Blending Slider
+### 5.2 Phonetic Blending Slider (Sound It Out)
 
 | Element | Details |
 |------|--------|
@@ -112,7 +112,7 @@ The system progressively develops phonics awareness, listening accuracy, and con
 
 ---
 
-### 5.3 Hungry Monster Game
+### 5.3 Story Game
 
 | Element | Details |
 |------|--------|
@@ -142,7 +142,7 @@ The system progressively develops phonics awareness, listening accuracy, and con
 | Success Metrics | Decrease in repeated misclassification |
 | Accessibility | Audio + text explanations |
 | Privacy / Data Retention | No audio recordings retained |
-| Priority | Must-have |
+| Priority | Nice-to-have |
 
 ---
 
@@ -176,7 +176,7 @@ The system progressively develops phonics awareness, listening accuracy, and con
 | Success Metrics | Weekly dashboard usage |
 | Accessibility | Screen-reader-friendly summaries |
 | Privacy / Data Retention | Aggregated learning data |
-| Priority | Must-have |
+| Priority | Nice-to-have |
 
 ---
 
