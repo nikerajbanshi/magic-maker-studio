@@ -1,5 +1,5 @@
 # Functional Specification Document  
-**Project:** Magic Maker Studio v1.1  
+**Project:** SoundSteps: Magic Maker Studio v1.1  
 **Team:** Team A  
 **Authors:** Dikshya Rai, Binam Poudel, Nikesh Rajbanshi  
 **Bootcamp Week:** Week 3  
@@ -10,7 +10,7 @@
 
 ## 1. Overview
 
-This document defines the functional specification for **Magic Maker Studio v1.1**, a mobile-first, gamified phonics and pronunciation learning application.  
+This document defines the functional specification for **SoundSteps:Magic Maker Studio v1.1**, a mobile-first, gamified phonics and pronunciation learning application.  
 The specification is aligned with Week 3 learning outcomes, emphasizing:
 
 - Scenario-based educational content planning  

@@ -46,7 +46,7 @@ magic-maker-studio/
 
 ## Week 3 Status
 
-- Functional Specification finalized and documented
+- Functional Specification finalized and documented for SoundSteps : Magic Maker Studio v1.1
 - Backend routers scaffolded to match learning phases
 - Frontend screen skeletons prepared (mobile-first)
 - Ready for UI wireframing and API integration

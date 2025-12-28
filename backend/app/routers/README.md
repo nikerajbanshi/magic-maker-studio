@@ -1,11 +1,10 @@
 # API Routers Overview (Week 3)
 
 This directory contains FastAPI router modules organized by learning domain
-and aligned with the Week 3 Functional Specification for **Magic Maker Studio v1.1**.
+and aligned with the Week 3 Functional Specification for **SoundSteps: Magic Maker Studio v1.1**.
 
 At this stage of the bootcamp, routers define **API intent and boundaries only**.
-Business logic, database integration, and authentication enforcement will be
-implemented in later weeks.
+Business logic, database integration, and authentication enforcement will be implemented in later weeks.
 
 ---
 
@@ -80,7 +79,7 @@ Competence Dashboard
 
 ## Notes
 
-- All routers are included in `main.py` to ensure visibility in OpenAPI docs.
+- All routers are included in `main.py` to ensure visibility in OpenAPI docs (http://127.0.0.1:8000/docs#/).
 - Route prefixes reflect feature ownership, not implementation completeness.
 - This structure directly mirrors the Functional Specification Document
   located at `docs/week-3/functional-spec.md`.
