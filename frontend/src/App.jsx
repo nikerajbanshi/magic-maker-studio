@@ -1,29 +1,28 @@
-import React from 'react';
-// Main application component for Magic Maker Studio frontend
+import { Routes, Route, Navigate } from "react-router-dom";
+import Landing from "./pages/Landing";
+import Login from "./pages/Login";
+import Register from "./pages/Register";
+import Dashboard from "./pages/Dashboard";
+import Flashcards from "./pages/Flashcards";
+import Blending from "./pages/Blending";
+import Understanding from "./pages/Understanding";
+import NavBar from "./components/NavBar";
+import PrivateRoute from "./components/PrivateRoute";
 
-function App() {
+export default function App() {
   return (
-    <div className="app-container" style={{ fontFamily: 'system-ui', padding: '20px' }}>
-      <header style={{ borderBottom: '2px solid #646cff', paddingBottom: '10px' }}>
-        <h1 style={{ color: '#646cff' }}>🎨 Magic Maker Studio</h1>
-        <nav>
-          <strong>Navigation Stubs:</strong> Landing | Login | Register | Dashboard
-        </nav>
-      </header>
-
-      <main style={{ marginTop: '40px', minHeight: '60vh' }}>
-        {/* This is where the Pages (Landing, Dashboard, etc.) will be injected */}
-        <div style={{ padding: '20px', border: '1px dashed #ccc' }}>
-          <h2>Creative Learning Sandbox</h2>
-          <p>Hello</p>
-        </div>
-      </main>
-
-      <footer style={{ marginTop: '40px', fontSize: '0.8rem', color: '#666' }}>
-        © 2025 Magic Maker Studio - Technical Setup Phase
-      </footer>
-    </div>
+      <div style={{ padding: '20px', maxWidth: '900px', margin: '0 auto' }}>
+        <NavBar />
+        <Routes>
+          <Route path="/" element={<Landing />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/register" element={<Register />} />
+          <Route path="/dashboard" element={<PrivateRoute><Dashboard /></PrivateRoute>} />
+          <Route path="/flashcards" element={<PrivateRoute><Flashcards /></PrivateRoute>} />
+          <Route path="/blending" element={<PrivateRoute><Blending /></PrivateRoute>} />
+          <Route path="/understanding" element={<PrivateRoute><Understanding /></PrivateRoute>} />
+          <Route path="*" element={<Navigate to="/" replace />} />
+        </Routes>
+      </div>
   );
 }
-
-export default App;

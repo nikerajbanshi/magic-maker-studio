@@ -1,0 +1,29 @@
+:root{ --accent:#5B8CFF; --muted:#6b7280; --card-bg:#fff }
+
+.under-root{ padding:16px }
+.under-header{ display:flex; gap:12px; align-items:center; margin-bottom:12px }
+.link-back{ background:none;border:0;color:var(--accent);cursor:pointer }
+
+.under-body{ display:flex; gap:18px; align-items:flex-start }
+.under-left{ flex:1; max-width:640 }
+.lottie-box{ background:var(--card-bg); padding:12px; border-radius:12px; display:flex; align-items:center; justify-content:center; box-shadow: 0 8px 20px rgba(12,18,30,0.06) }
+.prompt{ margin-top:12px; font-weight:700 }
+.choices{ display:flex; gap:8px; margin-top:8px; flex-wrap:wrap }
+.choice{ padding:10px 14px; border-radius:10px; background:#f7f7fb; border:1px solid rgba(15,23,42,0.04); cursor:pointer }
+.choice.correct{ border-color: #10b981; background:#ecfdf5 }
+.feedback{ margin-top:10px; font-weight:700 }
+.feedback.correct{ color:#059669 }
+.feedback.incorrect{ color:#b91c1c }
+.under-controls{ margin-top:12px; display:flex; gap:8px }
+.secondary{ padding:8px 10px; background:#fff; border:1px solid rgba(15,23,42,0.06); border-radius:8px; cursor:pointer }
+
+.under-right{ width:260px }
+.progress-box{ background:var(--card-bg); padding:12px; border-radius:10px; box-shadow: 0 6px 14px rgba(12,18,30,0.05) }
+.mini-grid{ display:flex; flex-wrap:wrap; gap:6px; margin-top:8px }
+.mini-cell{ width:48px; height:48px; background:#fbfbff; border-radius:8px; display:flex; flex-direction:column; align-items:center; justify-content:center }
+.mini-letter{ font-weight:700 }
+.mini-val{ font-size:12px; color:var(--muted) }
+.muted{ color:var(--muted); font-size:14px }
+.tip{ margin-top:12px; color:var(--muted); font-size:0.95rem }
+
+@media (max-width:840px){ .under-body{ flex-direction:column } .under-right{ width:100% } }
