@@ -1,6 +1,6 @@
 from fastapi import FastAPI
 from app.routes import health
-from app.routers.phonics import flashcards, blending, games, progress
+from app.routers.phonics import flashcards, sound_out, games, progress
 
 app = FastAPI(
     title="Magic Maker Studio API",
@@ -19,9 +19,9 @@ app.include_router(
 )
 
 app.include_router(
-    blending.router,
-    prefix="/api/phonics/blending",
-    tags=["Blending"]
+    sound_out.router,
+    prefix="/api/phonics/sound-out",
+    tags=["Sound Out"]
 )
 
 app.include_router(

@@ -7,7 +7,7 @@ export default function Dashboard() {
 
       <ul>
         <li><Link to="/flashcards">Flashcards</Link></li>
-        <li><Link to="/blending">Sound It Out</Link></li>
+        <li><Link to="/sound-out">Sound It Out</Link></li>
         <li><Link to="/game">Monster Game</Link></li>
       </ul>
     </div>

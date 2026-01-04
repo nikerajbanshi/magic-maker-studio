@@ -69,7 +69,7 @@ The system progressively develops phonics awareness, listening accuracy, and con
 | Feature | Phase | Priority |
 |------|------|---------|
 | Interactive Phonics Flashcards | Remember | Must-have |
-| Phonetic Blending Slider | Understand | Must-have |
+| Sound It Out (Phonetic Blending) | Understand | Must-have |
 | Hungry Monster Game | Apply | Must-have |
 | Minimal Pair Sorter | Analyze | Must-have |
 | Contextual Story Mode | Create | Nice-to-have |
@@ -95,7 +95,7 @@ The system progressively develops phonics awareness, listening accuracy, and con
 
 ---
 
-### 5.2 Phonetic Blending Slider
+### 5.2 Sound It Out (Phonetic Blending Slider)
 
 | Element | Details |
 |------|--------|
@@ -103,12 +103,15 @@ The system progressively develops phonics awareness, listening accuracy, and con
 | User Scenario | Learner drags slider to hear segmented vs blended sounds |
 | Inputs | Drag position, gesture speed |
 | Outputs | Variable-speed audio, visual blending cues |
-| Required Screens | Blending Practice Screen |
+| Required Screens | Sound It Out Practice Screen |
 | Acceptance Criteria | Audio responds accurately to slider movement |
 | Success Metrics | Reduced blending errors over time |
 | Accessibility | Visual indicators for audio speed |
 | Privacy / Data Retention | Session-level performance data only |
 | Priority | Must-have |
+
+**Pedagogical Note:** This feature teaches phonetic blending skills.
+**System Module:** `sound_out`
 
 ---
 
@@ -142,7 +145,7 @@ The system progressively develops phonics awareness, listening accuracy, and con
 | Success Metrics | Decrease in repeated misclassification |
 | Accessibility | Audio + text explanations |
 | Privacy / Data Retention | No audio recordings retained |
-| Priority | Must-have |
+| Priority | Nice-to-have |
 
 ---
 
@@ -176,7 +179,7 @@ The system progressively develops phonics awareness, listening accuracy, and con
 | Success Metrics | Weekly dashboard usage |
 | Accessibility | Screen-reader-friendly summaries |
 | Privacy / Data Retention | Aggregated learning data |
-| Priority | Must-have |
+| Priority | Nice-to-have |
 
 ---
 

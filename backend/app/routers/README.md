@@ -37,9 +37,10 @@ Interactive Phonics Flashcards (Remember Phase)
 
 ---
 
-### `/phonics/blending`
-**Mapped Feature:**  
-Phonetic Blending Slider (Understand Phase)
+### `/phonics/sound-out`
+**Feature (UI):** Sound It Out  
+**Pedagogical Skill:** Phonetic Blending  
+**System Module:** `sound_out`
 
 **Planned Responsibilities:**
 - Accept blend control input (e.g., slider position)
