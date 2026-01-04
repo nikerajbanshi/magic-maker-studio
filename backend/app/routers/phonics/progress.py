@@ -12,7 +12,7 @@ async def learner_progress():
         "status": "scaffolded",
         "progress": {
             "flashcards": "completed",
-            "blending": "in-progress",
+            "sound-out": "in-progress",
             "games": "locked"
         }
     }
