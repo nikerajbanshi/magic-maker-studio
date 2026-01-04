@@ -1,5 +1,5 @@
 # Functional Specification Document  
-**Project:** SoundSteps: Magic Maker Studio v1.1  
+**Project:** SoundSteps (Magic Maker Studio v1.1)  
 **Team:** Team A  
 **Authors:** Dikshya Rai, Binam Poudel, Nikesh Rajbanshi  
 **Bootcamp Week:** Week 3  
@@ -68,13 +68,13 @@ The system progressively develops phonics awareness, listening accuracy, and con
 
 | Feature | Phase | Priority |
 |------|------|---------|
+| User Authentication | System | Must-have |
 | Interactive Phonics Flashcards | Remember | Must-have |
 | Sound It Out (Phonetic Blending) | Understand | Must-have |
-| Hungry Monster Game | Apply | Must-have |
+| Hungry Monster Game (story Game) | Apply | Must-have |
 | Minimal Pair Sorter | Analyze | Must-have |
 | Contextual Story Mode | Create | Nice-to-have |
-| Competence Dashboard | Monitor | Must-have |
-| User Authentication | System | Must-have |
+| Competence Dashboard | Monitor | Nice-to-have |
 
 ---
 
@@ -115,7 +115,7 @@ The system progressively develops phonics awareness, listening accuracy, and con
 
 ---
 
-### 5.3 Hungry Monster Game
+### 5.3 Story Game
 
 | Element | Details |
 |------|--------|
