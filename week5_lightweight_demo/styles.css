@@ -1,0 +1,437 @@
+/* ========================================
+   SoundSteps Flashcard - Figma-Matched CSS
+   Lightweight, no external libraries
+   ======================================== */
+
+/* CSS Custom Properties */
+:root {
+    --color-purple: #9B7FE6;
+    --color-purple-dark: #8568D9;
+    --color-purple-light: #C9A8F5;
+    --color-blue: #5DADE2;
+    --color-white: #FFFFFF;
+    --color-text-dark: #2D2D2D;
+    --color-gray: #E8E8E8;
+    --font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    --border-radius-card: 24px;
+    --border-radius-btn: 50%;
+    --shadow-card: 0 8px 32px rgba(155, 127, 230, 0.15);
+}
+
+/* Reset */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 16px;
+}
+
+/* Body - Soft lavender gradient background */
+body {
+    font-family: var(--font-family);
+    min-height: 100vh;
+    background: linear-gradient(180deg, #E8E0F8 0%, #DCD4F5 50%, #D5CCF2 100%);
+    color: var(--color-text-dark);
+    line-height: 1.4;
+}
+
+/* Main Container - Centered column, no justify-between */
+.container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 16px 20px;
+}
+
+/* Content Wrapper - Shared width for header and flashcard group */
+.content-wrapper {
+    width: 90vw;
+    max-width: 400px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+/* ========================================
+   Header - Inline home + brand, left-aligned
+   ======================================== */
+.header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 8px 0;
+}
+
+.header-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.home-btn {
+    width: 36px;
+    height: 36px;
+    background: var(--color-white);
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    transition: transform 0.2s ease;
+    flex-shrink: 0;
+}
+
+.home-btn:hover {
+    transform: scale(1.05);
+}
+
+.home-icon {
+    width: 18px;
+    height: 18px;
+    color: var(--color-purple);
+}
+
+.brand-name {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--color-purple);
+}
+
+.sparkle {
+    font-size: 0.85rem;
+}
+
+.page-title {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--color-purple);
+    text-align: center;
+    margin: 0;
+}
+
+/* ========================================
+   Flashcard Group - Wrapper for title, card, nav
+   ======================================== */
+.flashcard-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    padding-top: 16px;
+    width: 100%;
+}
+
+/* ========================================
+   Flashcard Section
+   ======================================== */
+.flashcard-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+/* Card - White rounded container */
+.card {
+    background: var(--color-white);
+    border-radius: var(--border-radius-card);
+    box-shadow: var(--shadow-card);
+    padding: 36px 40px 32px;
+    width: 100%;
+    min-height: 360px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Letter Display - Large letters side by side */
+.letter-display {
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 16px;
+}
+
+.letter-upper {
+    font-size: 5rem;
+    font-weight: 700;
+    color: var(--color-purple);
+    line-height: 1;
+}
+
+.letter-lower {
+    font-size: 3.5rem;
+    font-weight: 600;
+    color: var(--color-purple-light);
+    line-height: 1;
+}
+
+/* Image Container */
+.image-container {
+    margin: 16px 0 20px;
+}
+
+.card-image {
+    width: 90px;
+    height: 90px;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Sound Button - Circular blue outline */
+.sound-btn {
+    width: 56px;
+    height: 56px;
+    background: var(--color-white);
+    border: 3px solid var(--color-blue);
+    border-radius: var(--border-radius-btn);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.sound-btn:hover {
+    background: #F0F9FF;
+    transform: scale(1.08);
+}
+
+.sound-btn:active {
+    transform: scale(0.95);
+}
+
+.sound-icon {
+    width: 26px;
+    height: 26px;
+    color: var(--color-blue);
+}
+
+/* ========================================
+   Navigation with progress bar
+   ======================================== */
+.navigation {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    padding: 0;
+    width: 100%;
+    max-width: 400px;
+}
+
+.nav-btn {
+    width: 48px;
+    height: 48px;
+    background: var(--color-purple);
+    border: none;
+    border-radius: var(--border-radius-btn);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 12px rgba(155, 127, 230, 0.3);
+    transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.nav-btn:hover {
+    background: var(--color-purple-dark);
+    transform: scale(1.05);
+}
+
+.nav-btn:active {
+    transform: scale(0.95);
+}
+
+.nav-icon {
+    width: 24px;
+    height: 24px;
+    color: var(--color-white);
+}
+
+/* Progress container with text and track */
+.progress-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+.progress-text {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--color-purple);
+}
+
+.progress-track {
+    width: 100%;
+    height: 6px;
+    background: var(--color-gray);
+    border-radius: 3px;
+    position: relative;
+}
+
+.progress-dot {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    width: 14px;
+    height: 14px;
+    background: var(--color-purple);
+    border-radius: 50%;
+    transition: left 0.3s ease;
+}
+
+/* ========================================
+   Animation
+   ======================================== */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.96);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.card.animate {
+    animation: fadeIn 0.25s ease-out;
+}
+
+/* ========================================
+   Focus States (Accessibility)
+   ======================================== */
+.home-btn:focus-visible,
+.sound-btn:focus-visible,
+.nav-btn:focus-visible {
+    outline: 3px solid var(--color-purple);
+    outline-offset: 3px;
+}
+
+/* ========================================
+   Responsive Adjustments
+   ======================================== */
+@media (max-width: 380px) {
+    .letter-upper {
+        font-size: 4rem;
+    }
+    
+    .letter-lower {
+        font-size: 2.75rem;
+    }
+    
+    .page-title {
+        font-size: 1.5rem;
+    }
+    
+    .card {
+        padding: 28px 24px 24px;
+        min-height: 300px;
+    }
+    
+    .card-image {
+        width: 70px;
+        height: 70px;
+    }
+}
+
+/* Tablet and larger screens */
+@media (min-width: 600px) {
+    .content-wrapper {
+        max-width: 480px;
+    }
+    
+    .flashcard-group {
+        gap: 20px;
+        padding-top: 24px;
+    }
+    
+    .card {
+        max-width: 480px;
+        min-height: 400px;
+        padding: 40px 48px 36px;
+    }
+    
+    .navigation {
+        max-width: 480px;
+    }
+    
+    .letter-upper {
+        font-size: 6rem;
+    }
+    
+    .letter-lower {
+        font-size: 4.5rem;
+    }
+    
+    .card-image {
+        width: 100px;
+        height: 100px;
+    }
+    
+    .sound-btn {
+        width: 64px;
+        height: 64px;
+    }
+    
+    .sound-icon {
+        width: 30px;
+        height: 30px;
+    }
+}
+
+/* Desktop screens */
+@media (min-width: 900px) {
+    .content-wrapper {
+        max-width: 520px;
+    }
+    
+    .flashcard-group {
+        gap: 24px;
+    }
+    
+    .card {
+        max-width: 520px;
+        min-height: 440px;
+        padding: 48px 56px 44px;
+    }
+    
+    .navigation {
+        max-width: 520px;
+    }
+    
+    .letter-upper {
+        font-size: 7rem;
+    }
+    
+    .letter-lower {
+        font-size: 5rem;
+    }
+    
+    .card-image {
+        width: 120px;
+        height: 120px;
+    }
+    
+    .page-title {
+        font-size: 1.85rem;
+    }
+}
