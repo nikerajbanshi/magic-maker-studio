@@ -57,3 +57,15 @@ This week's deliverable successfully establishes the link between the SoundSteps
 By visualizing the core screens and mapping them to specific database fields, the team has created a clear blueprint for development.
 As we proceed towards the final two weeks of development, we are diligently focused on creating a cohesive system with all the learnings from the bootcamp.
 
+## Week 5 Status
+
+This week marks the successful transition from design to functional code with the delivery of the Lightweight Web Content Demonstration. By implementing the core Flashcard module using performance-first principles, the team has validated the technical feasibility of a lightweight, accessible educational tool.
+
+Functional Implementation: Developed the standalone Flashcard Screen (A–Z) using semantic HTML and vanilla JavaScript.
+
+Optimization Strategy: Achieved sub-150KB page weight through WebP image conversion, audio compression, and deferred loading.
+
+Testing & Verification: Executed a comprehensive 15-point test plan covering cross-browser compatibility, mobile responsiveness, and Lighthouse performance metrics.
+
+Deliverable: Finalized the standalone demo package ready for functional review, proving the concept works offline and on low-bandwidth connections.
+
