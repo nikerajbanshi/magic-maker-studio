@@ -190,8 +190,8 @@ https://soundsteps-production.up.railway.app
 | Sound It Out | ✅ Working | 30 words with segmented/blended audio + speech recognition |
 | Hungry Monster | ✅ Working | Visual phonics game with confetti rewards |
 | Minimal Pairs | ✅ Working | Drag-drop sorting (/p/-/b/, /t/-/d/, etc.) |
-| Progress Tracking | ✅ Working | XP, streaks, skill badges |
-| Leaderboard | ✅ Working | Competitive rankings |
+| Progress Tracking | ✅ On-progress | XP, streaks, skill badges |
+| Leaderboard | ✅ On-progress | Competitive rankings |
 
 ### Screenshots
 
@@ -266,7 +266,7 @@ magic-maker-studio/
 │   ├── styles.css          # Styling
 │   ├── app.js              # Main JavaScript
 │   ├── services/           # JS service modules
-│   └── assets/             # Images & audio
+│   └── assets/             # Images & audio (Images are yet to be fully added)
 ├── docs/                    # Documentation
 │   └── week-6/             # This deliverable
 ├── Dockerfile              # Container configuration
