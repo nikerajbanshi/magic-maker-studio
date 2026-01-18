@@ -1,0 +1,515 @@
+{
+  "users": {
+    "guest_00001": {
+      "username": "TestGuest",
+      "email": "guest_00001@guest.soundsteps.app",
+      "id": "guest_00001",
+      "hashed_password": "",
+      "is_guest": true,
+      "created_at": "2026-01-17T09:12:11.270539",
+      "last_active": "2026-01-17T09:12:11.270539",
+      "progress": {
+        "flashcards_completed": [],
+        "soundout_completed": 0,
+        "games_completed": 0,
+        "minimal_pairs_completed": 0,
+        "total_time_spent": 0,
+        "current_streak": 0
+      }
+    },
+    "guest_00002": {
+      "username": "Guest",
+      "email": "guest_00002@guest.soundsteps.app",
+      "id": "guest_00002",
+      "hashed_password": "",
+      "is_guest": true,
+      "created_at": "2026-01-17T09:14:23.749299",
+      "last_active": "2026-01-17T09:14:23.749299",
+      "progress": {
+        "flashcards_completed": [],
+        "soundout_completed": 0,
+        "games_completed": 0,
+        "minimal_pairs_completed": 0,
+        "total_time_spent": 0,
+        "current_streak": 0
+      }
+    },
+    "guest_00003": {
+      "username": "Guest",
+      "email": "guest_00003@guest.soundsteps.app",
+      "id": "guest_00003",
+      "hashed_password": "",
+      "is_guest": true,
+      "created_at": "2026-01-17T09:15:52.272587",
+      "last_active": "2026-01-17T09:15:52.272587",
+      "progress": {
+        "flashcards_completed": [],
+        "soundout_completed": 0,
+        "games_completed": 0,
+        "minimal_pairs_completed": 0,
+        "total_time_spent": 0,
+        "current_streak": 0
+      }
+    },
+    "guest_00004": {
+      "username": "TestGuest",
+      "email": "guest_00004@guest.soundsteps.app",
+      "id": "guest_00004",
+      "hashed_password": "",
+      "is_guest": true,
+      "created_at": "2026-01-17T09:27:20.011950",
+      "last_active": "2026-01-17T09:27:20.011950",
+      "progress": {
+        "flashcards_completed": [],
+        "soundout_completed": 0,
+        "games_completed": 0,
+        "minimal_pairs_completed": 0,
+        "total_time_spent": 0,
+        "current_streak": 0
+      }
+    },
+    "guest_00005": {
+      "username": "Guest",
+      "email": "guest_00005@guest.soundsteps.app",
+      "id": "guest_00005",
+      "hashed_password": "",
+      "is_guest": true,
+      "created_at": "2026-01-17T09:33:46.305325",
+      "last_active": "2026-01-17T09:33:46.305325",
+      "progress": {
+        "flashcards_completed": [],
+        "soundout_completed": 0,
+        "games_completed": 0,
+        "minimal_pairs_completed": 0,
+        "total_time_spent": 0,
+        "current_streak": 0
+      }
+    },
+    "guest_00006": {
+      "username": "TestGuest",
+      "email": "guest_00006@guest.soundsteps.app",
+      "id": "guest_00006",
+      "hashed_password": "",
+      "is_guest": true,
+      "created_at": "2026-01-17T09:33:55.271905",
+      "last_active": "2026-01-17T09:33:55.271905",
+      "progress": {
+        "flashcards_completed": [],
+        "soundout_completed": 0,
+        "games_completed": 0,
+        "minimal_pairs_completed": 0,
+        "total_time_spent": 0,
+        "current_streak": 0
+      }
+    },
+    "guest_00007": {
+      "username": "Guest",
+      "email": "guest_00007@guest.soundsteps.app",
+      "id": "guest_00007",
+      "hashed_password": "",
+      "is_guest": true,
+      "created_at": "2026-01-17T09:34:52.921368",
+      "last_active": "2026-01-17T09:34:52.921368",
+      "progress": {
+        "flashcards_completed": [],
+        "soundout_completed": 0,
+        "games_completed": 0,
+        "minimal_pairs_completed": 0,
+        "total_time_spent": 0,
+        "current_streak": 0
+      }
+    },
+    "guest_00008": {
+      "username": "Guest",
+      "email": "guest_00008@guest.soundsteps.app",
+      "id": "guest_00008",
+      "hashed_password": "",
+      "is_guest": true,
+      "created_at": "2026-01-17T09:36:58.954014",
+      "last_active": "2026-01-17T09:36:58.954014",
+      "progress": {
+        "flashcards_completed": [],
+        "soundout_completed": 0,
+        "games_completed": 0,
+        "minimal_pairs_completed": 0,
+        "total_time_spent": 0,
+        "current_streak": 0
+      }
+    },
+    "guest_00009": {
+      "username": "Guest",
+      "email": "guest_00009@guest.soundsteps.app",
+      "id": "guest_00009",
+      "hashed_password": "",
+      "is_guest": true,
+      "created_at": "2026-01-17T09:37:06.855500",
+      "last_active": "2026-01-17T09:37:06.855500",
+      "progress": {
+        "flashcards_completed": [],
+        "soundout_completed": 0,
+        "games_completed": 0,
+        "minimal_pairs_completed": 0,
+        "total_time_spent": 0,
+        "current_streak": 0
+      }
+    },
+    "guest_00010": {
+      "username": "Guest",
+      "email": "guest_00010@guest.soundsteps.app",
+      "id": "guest_00010",
+      "hashed_password": "",
+      "is_guest": true,
+      "created_at": "2026-01-17T09:39:00.350908",
+      "last_active": "2026-01-17T09:39:00.350908",
+      "progress": {
+        "flashcards_completed": [],
+        "soundout_completed": 0,
+        "games_completed": 0,
+        "minimal_pairs_completed": 0,
+        "total_time_spent": 0,
+        "current_streak": 0
+      }
+    },
+    "guest_00011": {
+      "username": "Guest",
+      "email": "guest_00011@guest.soundsteps.app",
+      "id": "guest_00011",
+      "hashed_password": "",
+      "is_guest": true,
+      "created_at": "2026-01-17T09:39:56.153279",
+      "last_active": "2026-01-17T09:39:56.153279",
+      "progress": {
+        "flashcards_completed": [],
+        "soundout_completed": 0,
+        "games_completed": 0,
+        "minimal_pairs_completed": 0,
+        "total_time_spent": 0,
+        "current_streak": 0
+      }
+    },
+    "guest_00012": {
+      "username": "Guest",
+      "email": "guest_00012@guest.soundsteps.app",
+      "id": "guest_00012",
+      "hashed_password": "",
+      "is_guest": true,
+      "created_at": "2026-01-17T09:40:50.367898",
+      "last_active": "2026-01-17T09:40:50.367898",
+      "progress": {
+        "flashcards_completed": [],
+        "soundout_completed": 0,
+        "games_completed": 0,
+        "minimal_pairs_completed": 0,
+        "total_time_spent": 0,
+        "current_streak": 0
+      }
+    },
+    "guest_00013": {
+      "username": "Guest",
+      "email": "guest_00013@guest.soundsteps.app",
+      "id": "guest_00013",
+      "hashed_password": "",
+      "is_guest": true,
+      "created_at": "2026-01-17T09:46:37.927276",
+      "last_active": "2026-01-17T09:46:37.927276",
+      "progress": {
+        "flashcards_completed": [],
+        "soundout_completed": 0,
+        "games_completed": 0,
+        "minimal_pairs_completed": 0,
+        "total_time_spent": 0,
+        "current_streak": 0
+      }
+    },
+    "guest_00014": {
+      "username": "Guest",
+      "email": "guest_00014@guest.soundsteps.app",
+      "id": "guest_00014",
+      "hashed_password": "",
+      "is_guest": true,
+      "created_at": "2026-01-17T09:49:11.271190",
+      "last_active": "2026-01-17T09:49:11.271190",
+      "progress": {
+        "flashcards_completed": [],
+        "soundout_completed": 0,
+        "games_completed": 0,
+        "minimal_pairs_completed": 0,
+        "total_time_spent": 0,
+        "current_streak": 0
+      }
+    },
+    "guest_00015": {
+      "username": "Guest",
+      "email": "guest_00015@guest.soundsteps.app",
+      "id": "guest_00015",
+      "hashed_password": "",
+      "is_guest": true,
+      "created_at": "2026-01-17T09:49:28.668307",
+      "last_active": "2026-01-17T09:49:28.668307",
+      "progress": {
+        "flashcards_completed": [],
+        "soundout_completed": 0,
+        "games_completed": 0,
+        "minimal_pairs_completed": 0,
+        "total_time_spent": 0,
+        "current_streak": 0
+      }
+    },
+    "guest_00016": {
+      "username": "Guest",
+      "email": "guest_00016@guest.soundsteps.app",
+      "id": "guest_00016",
+      "hashed_password": "",
+      "is_guest": true,
+      "created_at": "2026-01-17T09:53:51.904086",
+      "last_active": "2026-01-17T09:53:51.904086",
+      "progress": {
+        "flashcards_completed": [],
+        "soundout_completed": 0,
+        "games_completed": 0,
+        "minimal_pairs_completed": 0,
+        "total_time_spent": 0,
+        "current_streak": 0
+      }
+    },
+    "95f35d8b-c632-4efa-a59f-7b139c714e7a": {
+      "username": "test",
+      "email": "test@test.com",
+      "id": "95f35d8b-c632-4efa-a59f-7b139c714e7a",
+      "hashed_password": "$2b$12$A2jNTtQdSONxnUH6f0yBruF43h6orD.QFTxUF3vS5mJ0L4OFbvCOm",
+      "is_guest": false,
+      "created_at": "2026-01-17T10:00:48.690625",
+      "last_active": "2026-01-17T10:00:48.690625",
+      "progress": {
+        "flashcards_completed": [],
+        "soundout_completed": 0,
+        "games_completed": 0,
+        "minimal_pairs_completed": 0,
+        "total_time_spent": 0,
+        "current_streak": 0
+      }
+    },
+    "guest_00017": {
+      "username": "Guest",
+      "email": "guest_00017@guest.soundsteps.app",
+      "id": "guest_00017",
+      "hashed_password": "",
+      "is_guest": true,
+      "created_at": "2026-01-17T11:08:49.210212",
+      "last_active": "2026-01-17T11:08:49.210212",
+      "progress": {
+        "flashcards_completed": [],
+        "soundout_completed": 0,
+        "games_completed": 0,
+        "minimal_pairs_completed": 0,
+        "total_time_spent": 0,
+        "current_streak": 0
+      }
+    },
+    "guest_00018": {
+      "username": "Guest",
+      "email": "guest_00018@guest.soundsteps.app",
+      "id": "guest_00018",
+      "hashed_password": "",
+      "is_guest": true,
+      "created_at": "2026-01-17T11:51:32.695092",
+      "last_active": "2026-01-17T11:51:32.695092",
+      "progress": {
+        "flashcards_completed": [],
+        "soundout_completed": 0,
+        "games_completed": 0,
+        "minimal_pairs_completed": 0,
+        "total_time_spent": 0,
+        "current_streak": 0
+      }
+    },
+    "guest_00019": {
+      "username": "Guest",
+      "email": "guest_00019@guest.soundsteps.app",
+      "id": "guest_00019",
+      "hashed_password": "",
+      "is_guest": true,
+      "created_at": "2026-01-17T11:53:45.141043",
+      "last_active": "2026-01-17T11:53:45.141043",
+      "progress": {
+        "flashcards_completed": [],
+        "soundout_completed": 0,
+        "games_completed": 0,
+        "minimal_pairs_completed": 0,
+        "total_time_spent": 0,
+        "current_streak": 0
+      }
+    },
+    "guest_00020": {
+      "username": "Guest",
+      "email": "guest_00020@guest.soundsteps.app",
+      "id": "guest_00020",
+      "hashed_password": "",
+      "is_guest": true,
+      "created_at": "2026-01-17T11:59:37.774933",
+      "last_active": "2026-01-17T11:59:37.774933",
+      "progress": {
+        "flashcards_completed": [],
+        "soundout_completed": 0,
+        "games_completed": 0,
+        "minimal_pairs_completed": 0,
+        "total_time_spent": 0,
+        "current_streak": 0
+      }
+    },
+    "guest_00021": {
+      "username": "Guest",
+      "email": "guest_00021@guest.soundsteps.app",
+      "id": "guest_00021",
+      "hashed_password": "",
+      "is_guest": true,
+      "created_at": "2026-01-17T11:59:47.320327",
+      "last_active": "2026-01-17T11:59:47.320327",
+      "progress": {
+        "flashcards_completed": [],
+        "soundout_completed": 0,
+        "games_completed": 0,
+        "minimal_pairs_completed": 0,
+        "total_time_spent": 0,
+        "current_streak": 0
+      }
+    },
+    "guest_00022": {
+      "username": "Guest",
+      "email": "guest_00022@guest.soundsteps.app",
+      "id": "guest_00022",
+      "hashed_password": "",
+      "is_guest": true,
+      "created_at": "2026-01-17T12:03:19.662079",
+      "last_active": "2026-01-17T12:03:19.662079",
+      "progress": {
+        "flashcards_completed": [],
+        "soundout_completed": 0,
+        "games_completed": 0,
+        "minimal_pairs_completed": 0,
+        "total_time_spent": 0,
+        "current_streak": 0
+      }
+    },
+    "guest_00023": {
+      "username": "Guest",
+      "email": "guest_00023@guest.soundsteps.app",
+      "id": "guest_00023",
+      "hashed_password": "",
+      "is_guest": true,
+      "created_at": "2026-01-17T12:07:17.509498",
+      "last_active": "2026-01-17T12:07:17.509498",
+      "progress": {
+        "flashcards_completed": [],
+        "soundout_completed": 0,
+        "games_completed": 0,
+        "minimal_pairs_completed": 0,
+        "total_time_spent": 0,
+        "current_streak": 0
+      }
+    },
+    "guest_00024": {
+      "username": "Guest",
+      "email": "guest_00024@guest.soundsteps.app",
+      "id": "guest_00024",
+      "hashed_password": "",
+      "is_guest": true,
+      "created_at": "2026-01-18T13:24:51.809431",
+      "last_active": "2026-01-18T13:24:51.809431",
+      "progress": {
+        "flashcards_completed": [],
+        "soundout_completed": 0,
+        "games_completed": 0,
+        "minimal_pairs_completed": 0,
+        "total_time_spent": 0,
+        "current_streak": 0
+      }
+    },
+    "guest_00025": {
+      "username": "Guest",
+      "email": "guest_00025@guest.soundsteps.app",
+      "id": "guest_00025",
+      "hashed_password": "",
+      "is_guest": true,
+      "created_at": "2026-01-18T13:29:39.057095",
+      "last_active": "2026-01-18T13:29:39.057095",
+      "progress": {
+        "flashcards_completed": [],
+        "soundout_completed": 0,
+        "games_completed": 0,
+        "minimal_pairs_completed": 0,
+        "total_time_spent": 0,
+        "current_streak": 0
+      }
+    },
+    "guest_00026": {
+      "username": "Guest",
+      "email": "guest_00026@guest.soundsteps.app",
+      "id": "guest_00026",
+      "hashed_password": "",
+      "is_guest": true,
+      "created_at": "2026-01-18T15:11:26.057094",
+      "last_active": "2026-01-18T15:11:26.057094",
+      "progress": {
+        "flashcards_completed": [],
+        "soundout_completed": 0,
+        "games_completed": 0,
+        "minimal_pairs_completed": 0,
+        "total_time_spent": 0,
+        "current_streak": 0
+      }
+    },
+    "guest_00027": {
+      "username": "Guest",
+      "email": "guest_00027@guest.soundsteps.app",
+      "id": "guest_00027",
+      "hashed_password": "",
+      "is_guest": true,
+      "created_at": "2026-01-18T15:40:20.622447",
+      "last_active": "2026-01-18T15:40:20.622447",
+      "progress": {
+        "flashcards_completed": [],
+        "soundout_completed": 0,
+        "games_completed": 0,
+        "minimal_pairs_completed": 0,
+        "total_time_spent": 0,
+        "current_streak": 0
+      }
+    },
+    "guest_00028": {
+      "username": "Guest",
+      "email": "guest_00028@guest.soundsteps.app",
+      "id": "guest_00028",
+      "hashed_password": "",
+      "is_guest": true,
+      "created_at": "2026-01-18T15:41:17.135324",
+      "last_active": "2026-01-18T15:41:17.135324",
+      "progress": {
+        "flashcards_completed": [],
+        "soundout_completed": 0,
+        "games_completed": 0,
+        "minimal_pairs_completed": 0,
+        "total_time_spent": 0,
+        "current_streak": 0
+      }
+    },
+    "guest_00029": {
+      "username": "Guest",
+      "email": "guest_00029@guest.soundsteps.app",
+      "id": "guest_00029",
+      "hashed_password": "",
+      "is_guest": true,
+      "created_at": "2026-01-18T15:44:29.341621",
+      "last_active": "2026-01-18T15:44:29.341621",
+      "progress": {
+        "flashcards_completed": [],
+        "soundout_completed": 0,
+        "games_completed": 0,
+        "minimal_pairs_completed": 0,
+        "total_time_spent": 0,
+        "current_streak": 0
+      }
+    }
+  },
+  "guest_counter": 29
+}

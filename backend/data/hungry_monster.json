@@ -1,0 +1,71 @@
+[
+  {
+    "id": 1,
+    "question": "The hungry monster wants something round and red to eat!",
+    "audio": "/assets/audio/monster-question-1.mp3",
+    "correctAnswer": "apple",
+    "options": [
+      {
+        "word": "apple",
+        "image": "/assets/images/apple.webp",
+        "audio": "/assets/audio/apple-word.mp3"
+      },
+      {
+        "word": "ball",
+        "image": "/assets/images/ball.webp",
+        "audio": "/assets/audio/ball-word.mp3"
+      },
+      {
+        "word": "cat",
+        "image": "/assets/images/cat.webp",
+        "audio": "/assets/audio/cat-word.mp3"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "question": "The hungry monster wants something that bounces!",
+    "audio": "/assets/audio/monster-question-2.mp3",
+    "correctAnswer": "ball",
+    "options": [
+      {
+        "word": "dog",
+        "image": "/assets/images/dog.webp",
+        "audio": "/assets/audio/dog-word.mp3"
+      },
+      {
+        "word": "ball",
+        "image": "/assets/images/ball.webp",
+        "audio": "/assets/audio/ball-word.mp3"
+      },
+      {
+        "word": "egg",
+        "image": "/assets/images/egg.webp",
+        "audio": "/assets/audio/egg-word.mp3"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "question": "The hungry monster wants something that says meow!",
+    "audio": "/assets/audio/monster-question-3.mp3",
+    "correctAnswer": "cat",
+    "options": [
+      {
+        "word": "cat",
+        "image": "/assets/images/cat.webp",
+        "audio": "/assets/audio/cat-word.mp3"
+      },
+      {
+        "word": "dog",
+        "image": "/assets/images/dog.webp",
+        "audio": "/assets/audio/dog-word.mp3"
+      },
+      {
+        "word": "bat",
+        "image": "/assets/images/bat.webp",
+        "audio": "/assets/audio/bat-word.mp3"
+      }
+    ]
+  }
+]

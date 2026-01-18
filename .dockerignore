@@ -1,0 +1,90 @@
+# .dockerignore - Files to exclude from Docker build context
+
+# Git
+.git
+.gitignore
+
+# Node/NPM
+node_modules/
+npm-debug.log
+yarn-debug.log
+yarn-error.log
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+.nox/
+.venv
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Environment files (use Docker env instead)
+.env.local
+.env.*.local
+
+# Documentation (not needed in production image)
+*.md
+docs/
+*.txt
+!requirements.txt
+
+# Test files
+tests/
+test_*.py
+*_test.py
+test_api.sh
+TESTING_CHECKLIST.md
+
+# Development scripts
+scripts/
+start.sh
+
+# Frontend dev files (if building separately)
+frontend/node_modules/
+
+# Logs
+*.log
+logs/
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+
+# Week 5 demo (separate project)
+week5_lightweight_demo/

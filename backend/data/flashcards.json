@@ -1,0 +1,236 @@
+[
+  {
+    "id": 1,
+    "letter": "A",
+    "letterLower": "a",
+    "word": "Apple",
+    "image": "/assets/images/apple.webp",
+    "audio": "/assets/audio/a-sound.mp3",
+    "phoneme": "/æ/"
+  },
+  {
+    "id": 2,
+    "letter": "B",
+    "letterLower": "b",
+    "word": "Ball",
+    "image": "/assets/images/ball.webp",
+    "audio": "/assets/audio/b-sound.mp3",
+    "phoneme": "/b/"
+  },
+  {
+    "id": 3,
+    "letter": "C",
+    "letterLower": "c",
+    "word": "Cat",
+    "image": "/assets/images/cat.webp",
+    "audio": "/assets/audio/c-sound.mp3",
+    "phoneme": "/k/"
+  },
+  {
+    "id": 4,
+    "letter": "D",
+    "letterLower": "d",
+    "word": "Dog",
+    "image": "/assets/images/dog.webp",
+    "audio": "/assets/audio/d-sound.mp3",
+    "phoneme": "/d/"
+  },
+  {
+    "id": 5,
+    "letter": "E",
+    "letterLower": "e",
+    "word": "Egg",
+    "image": "/assets/images/egg.webp",
+    "audio": "/assets/audio/e-sound.mp3",
+    "phoneme": "/ɛ/"
+  },
+  {
+    "id": 6,
+    "letter": "F",
+    "letterLower": "f",
+    "word": "Fish",
+    "image": "/assets/images/fish.webp",
+    "audio": "/assets/audio/f-sound.mp3",
+    "phoneme": "/f/"
+  },
+  {
+    "id": 7,
+    "letter": "G",
+    "letterLower": "g",
+    "word": "Grapes",
+    "image": "/assets/images/grapes.webp",
+    "audio": "/assets/audio/g-sound.mp3",
+    "phoneme": "/ɡ/"
+  },
+  {
+    "id": 8,
+    "letter": "H",
+    "letterLower": "h",
+    "word": "Hat",
+    "image": "/assets/images/hat.webp",
+    "audio": "/assets/audio/h-sound.mp3",
+    "phoneme": "/h/"
+  },
+  {
+    "id": 9,
+    "letter": "I",
+    "letterLower": "i",
+    "word": "Igloo",
+    "image": "/assets/images/igloo.webp",
+    "audio": "/assets/audio/i-sound.mp3",
+    "phoneme": "/ɪ/"
+  },
+  {
+    "id": 10,
+    "letter": "J",
+    "letterLower": "j",
+    "word": "Jar",
+    "image": "/assets/images/jar.webp",
+    "audio": "/assets/audio/j-sound.mp3",
+    "phoneme": "/dʒ/"
+  },
+  {
+    "id": 11,
+    "letter": "K",
+    "letterLower": "k",
+    "word": "Kite",
+    "image": "/assets/images/kite.webp",
+    "audio": "/assets/audio/k-sound.mp3",
+    "phoneme": "/k/"
+  },
+  {
+    "id": 12,
+    "letter": "L",
+    "letterLower": "l",
+    "word": "Lion",
+    "image": "/assets/images/lion.webp",
+    "audio": "/assets/audio/l-sound.mp3",
+    "phoneme": "/l/"
+  },
+  {
+    "id": 13,
+    "letter": "M",
+    "letterLower": "m",
+    "word": "Moon",
+    "image": "/assets/images/moon.webp",
+    "audio": "/assets/audio/m-sound.mp3",
+    "phoneme": "/m/"
+  },
+  {
+    "id": 14,
+    "letter": "N",
+    "letterLower": "n",
+    "word": "Nest",
+    "image": "/assets/images/nest.webp",
+    "audio": "/assets/audio/n-sound.mp3",
+    "phoneme": "/n/"
+  },
+  {
+    "id": 15,
+    "letter": "O",
+    "letterLower": "o",
+    "word": "Orange",
+    "image": "/assets/images/orange.webp",
+    "audio": "/assets/audio/o-sound.mp3",
+    "phoneme": "/ɒ/"
+  },
+  {
+    "id": 16,
+    "letter": "P",
+    "letterLower": "p",
+    "word": "Pig",
+    "image": "/assets/images/pig.webp",
+    "audio": "/assets/audio/p-sound.mp3",
+    "phoneme": "/p/"
+  },
+  {
+    "id": 17,
+    "letter": "Q",
+    "letterLower": "q",
+    "word": "Queen",
+    "image": "/assets/images/queen.webp",
+    "audio": "/assets/audio/q-sound.mp3",
+    "phoneme": "/kw/"
+  },
+  {
+    "id": 18,
+    "letter": "R",
+    "letterLower": "r",
+    "word": "Robot",
+    "image": "/assets/images/robot.webp",
+    "audio": "/assets/audio/r-sound.mp3",
+    "phoneme": "/r/"
+  },
+  {
+    "id": 19,
+    "letter": "S",
+    "letterLower": "s",
+    "word": "Sun",
+    "image": "/assets/images/sun.webp",
+    "audio": "/assets/audio/s-sound.mp3",
+    "phoneme": "/s/"
+  },
+  {
+    "id": 20,
+    "letter": "T",
+    "letterLower": "t",
+    "word": "Tiger",
+    "image": "/assets/images/tiger.webp",
+    "audio": "/assets/audio/t-sound.mp3",
+    "phoneme": "/t/"
+  },
+  {
+    "id": 21,
+    "letter": "U",
+    "letterLower": "u",
+    "word": "Umbrella",
+    "image": "/assets/images/umbrella.webp",
+    "audio": "/assets/audio/u-sound.mp3",
+    "phoneme": "/ʌ/"
+  },
+  {
+    "id": 22,
+    "letter": "V",
+    "letterLower": "v",
+    "word": "Van",
+    "image": "/assets/images/van.webp",
+    "audio": "/assets/audio/v-sound.mp3",
+    "phoneme": "/v/"
+  },
+  {
+    "id": 23,
+    "letter": "W",
+    "letterLower": "w",
+    "word": "Watch",
+    "image": "/assets/images/watch.webp",
+    "audio": "/assets/audio/w-sound.mp3",
+    "phoneme": "/w/"
+  },
+  {
+    "id": 24,
+    "letter": "X",
+    "letterLower": "x",
+    "word": "Xray",
+    "image": "/assets/images/xray.webp",
+    "audio": "/assets/audio/x-sound.mp3",
+    "phoneme": "/ks/"
+  },
+  {
+    "id": 25,
+    "letter": "Y",
+    "letterLower": "y",
+    "word": "Yoyo",
+    "image": "/assets/images/yoyo.webp",
+    "audio": "/assets/audio/y-sound.mp3",
+    "phoneme": "/j/"
+  },
+  {
+    "id": 26,
+    "letter": "Z",
+    "letterLower": "z",
+    "word": "Zebra",
+    "image": "/assets/images/zebra.webp",
+    "audio": "/assets/audio/z-sound.mp3",
+    "phoneme": "/z/"
+  }
+]
