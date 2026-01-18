@@ -1,278 +1,227 @@
-# SoundSteps - Interactive Phonics Learning Platform
+# 🎵 SoundSteps - Interactive Phonics Learning Platform
 
-**Transform learning into an adventure!** 🎨✨
+<div align="center">
 
-SoundSteps is a mobile-first, gamified phonics and pronunciation learning application designed to guide learners through progressive stages of competence using interactive, game-based modules.
+![SoundSteps Banner](https://img.shields.io/badge/SoundSteps-Phonics%20Learning-9B7FE6?style=for-the-badge&logo=music&logoColor=white)
+
+**Transform learning into an adventure!** ✨
+
+[![Python](https://img.shields.io/badge/Python-3.11+-3776AB?style=flat&logo=python&logoColor=white)](https://python.org)
+[![FastAPI](https://img.shields.io/badge/FastAPI-0.100+-009688?style=flat&logo=fastapi&logoColor=white)](https://fastapi.tiangolo.com)
+[![Docker](https://img.shields.io/badge/Docker-Ready-2496ED?style=flat&logo=docker&logoColor=white)](https://docker.com)
+[![License](https://img.shields.io/badge/License-MIT-green?style=flat)](LICENSE)
+
+[Quick Start](#-quick-start) • [Features](#-features) • [Docker](#-docker) • [Deploy](#-deploy-to-railway) • [API Docs](#-api-documentation)
+
+</div>
+
+---
+
+## 📖 About
+
+SoundSteps is a mobile-first, gamified phonics learning application designed for children and ESL learners. The platform uses interactive games, visual feedback, and progress tracking to make learning phonics fun and effective.
 
 ---
 
 ## 🚀 Quick Start
 
-### Option 1: Using the Start Script (Recommended)
+### Prerequisites
+- **Python 3.11+** or **Docker Desktop**
+- macOS, Linux, or Windows
 
+### One-Command Setup
+
+**macOS/Linux:**
 ```bash
-bash start.sh
+chmod +x start.sh && ./start.sh
+```
+
+**Windows:**
+```cmd
+start.bat
 ```
 
 The script will:
-- Create a virtual environment if needed
-- Install all dependencies
-- Launch the FastAPI server
-- Display the local access URL
+1. ✅ Set up the Python environment
+2. ✅ Install all dependencies  
+3. ✅ Start the FastAPI server
+4. ✅ Build and run Docker container
+5. ✅ Open the app in your browser
 
-### Option 2: Manual Setup
+**Access the app:** http://localhost:8000
+
+---
+
+## 🎮 Features
+
+| Module | Description | Skills |
+|--------|-------------|--------|
+| **📚 Flashcards** | Interactive A-Z alphabet cards with audio | Letter recognition, phoneme awareness |
+| **🔊 Sound It Out** | Phoneme blending exercises | Segmenting, blending sounds |
+| **👾 Hungry Monster** | Listening comprehension game | Auditory discrimination |
+| **🔀 Minimal Pairs** | Sound distinction sorting | Phoneme differentiation |
+
+### Additional Features
+- 🏆 **Progress Tracking** - XP, streaks, and achievements
+- 🎯 **Skill Badges** - Unlock rewards as you learn
+- 🎊 **Confetti Celebrations** - Instant positive feedback
+- 📱 **Mobile-First Design** - Works on all devices
+- 🔐 **Guest & User Login** - No signup required to start
+
+---
+
+## 🐳 Docker
+
+### Quick Docker Start
 
 ```bash
-# Navigate to backend
+# Build and run
+./docker-run.sh
+
+# Or manually:
+docker build -t soundsteps .
+docker run -d --name soundsteps-app -p 8000:8000 soundsteps
+```
+
+### Docker Commands
+
+```bash
+# View logs
+docker logs -f soundsteps-app
+
+# Stop container
+docker stop soundsteps-app
+
+# Restart container
+docker restart soundsteps-app
+
+# Remove container
+docker rm -f soundsteps-app
+```
+
+---
+
+## 🌐 Deploy to Railway
+
+Railway is the easiest way to deploy SoundSteps to the web. See [DEPLOYMENT.md](DEPLOYMENT.md) for full instructions.
+
+### Quick Deploy Steps
+1. Push your code to GitHub
+2. Go to [railway.app](https://railway.app)
+3. Click **"Deploy from GitHub repo"**
+4. Select your repository
+5. Railway auto-detects the Dockerfile and deploys! 🚀
+
+Your app will be live at: `https://soundsteps-xxx.up.railway.app`
+
+---
+
+## 📁 Project Structure
+
+```
+magic-maker-studio/
+├── backend/                 # FastAPI application
+│   ├── app/
+│   │   ├── main.py         # Application entry point
+│   │   ├── routes/         # API route handlers
+│   │   └── routers/        # Phonics module routers
+│   ├── data/               # JSON data files
+│   └── requirements.txt    # Python dependencies
+├── static/                  # Frontend application
+│   ├── index.html          # Main HTML file
+│   ├── app.js              # Application logic
+│   ├── styles.css          # Styling
+│   ├── services/           # JS service modules
+│   └── assets/             # Images and audio
+│       ├── images/         # 41 WebP images
+│       └── audio/          # 171 MP3 audio files
+├── docs/                    # Weekly documentation
+├── Dockerfile              # Docker configuration
+├── docker-compose.yml      # Docker Compose config
+├── start.sh                # macOS/Linux startup script
+├── start.bat               # Windows startup script
+└── docker-run.sh           # Docker launcher script
+```
+
+---
+
+## 🔌 API Documentation
+
+Once running, access the interactive API docs:
+
+- **Swagger UI:** http://localhost:8000/docs
+- **ReDoc:** http://localhost:8000/redoc
+- **Health Check:** http://localhost:8000/health
+
+### Key Endpoints
+
+| Method | Endpoint | Description |
+|--------|----------|-------------|
+| GET | `/api/flashcards` | Get all flashcard data |
+| GET | `/api/sound-out` | Get sound-out exercises |
+| GET | `/api/game/hungry-monster` | Get monster game questions |
+| GET | `/api/minimal-pairs` | Get minimal pairs exercises |
+| POST | `/api/auth/login` | User login |
+| POST | `/api/auth/register` | User registration |
+| POST | `/api/auth/guest` | Guest login |
+
+---
+
+## 🛠️ Manual Setup
+
+If you prefer manual setup over the start scripts:
+
+```bash
+# 1. Clone the repository
+git clone https://github.com/your-username/magic-maker-studio.git
+cd magic-maker-studio
+
+# 2. Create virtual environment
 cd backend
-
-# Create and activate virtual environment
 python3 -m venv venv
-source venv/bin/activate  # On Windows: venv\Scripts\activate
 
-# Install dependencies
+# 3. Activate virtual environment
+source venv/bin/activate        # macOS/Linux
+# venv\Scripts\activate         # Windows
+
+# 4. Install dependencies
 pip install -r requirements.txt
 
-# Run the server
+# 5. Run the server
 uvicorn app.main:app --host 0.0.0.0 --port 8000 --reload
 ```
 
-### Option 3: Docker
+---
+
+## 🧪 Testing
 
 ```bash
-# Build and run with Docker Compose
-docker-compose up --build
+# Run API tests
+bash test_api.sh
 
-# Or build and run manually
-docker build -t soundsteps .
-docker run -p 8000:8000 soundsteps
+# Manual health check
+curl http://localhost:8000/health
 ```
-
----
-
-## 📱 Access the Application
-
-Once running, access SoundSteps at:
-
-- **Main Application**: http://localhost:8000
-- **API Documentation**: http://localhost:8000/docs
-- **Alternative API Docs**: http://localhost:8000/redoc
-
----
-
-## 🎯 Core Features
-
-### 1. **Interactive Phonics Flashcards** 📚
-- Learn letters A-Z with visual anchors
-- Audio pronunciation for each letter
-- Smooth animations and progress tracking
-
-### 2. **Sound It Out** 🔊
-- Phonetic blending practice with slider control
-- Transition from segmented to blended sounds
-- Visual phoneme display
-
-### 3. **Hungry Monster Game** 👾
-- Gamified listening comprehension
-- Interactive drag-and-drop gameplay
-- Instant feedback and scoring
-
-### 4. **Minimal Pair Sorter** 🎯
-- Distinguish similar phonemes
-- Sort words into correct phoneme categories
-- Build phonemic awareness
-
-### 5. **Guest Authentication** 👤
-- Quick guest login to start learning
-- Session tracking for progress
-- No registration required to try
-
----
-
-## 🏗️ Architecture
-
-### Backend
-- **Framework**: FastAPI (Python 3.11+)
-- **API**: RESTful endpoints with automatic OpenAPI docs
-- **Data**: JSON file-based storage (lightweight demo)
-- **Static Serving**: Integrated file serving for frontend and assets
-
-### Frontend
-- **Approach**: Vanilla JavaScript (no frameworks)
-- **Styling**: Custom CSS with mobile-first design
-- **Performance**: Lightweight, no external CDN dependencies
-- **Responsiveness**: Optimized for mobile and desktop
-
-### Project Structure
-```
-soundsteps/
-├── backend/                 # FastAPI backend
-│   ├── app/
-│   │   ├── main.py         # Application entry point
-│   │   ├── routes/         # API routes
-│   │   └── routers/        # Feature routers
-│   ├── data/               # JSON data files
-│   └── requirements.txt    # Python dependencies
-├── static/                 # Frontend files
-│   ├── index.html         # Main HTML
-│   ├── styles.css         # Application styles
-│   └── app.js             # Application logic
-├── assets/                # Media assets
-│   ├── images/            # WebP images
-│   └── audio/             # MP3 audio files
-├── docs/                  # Documentation
-├── Dockerfile             # Docker configuration
-├── docker-compose.yml     # Docker Compose config
-└── start.sh              # Startup script
-```
-
----
-
-## 🔌 API Endpoints
-
-### User Management
-- `POST /api/user/start` - Start guest session
-- `GET /api/user/{session_id}` - Get session info
-
-### Flashcards
-- `GET /api/cards` - Get all flashcards
-- `GET /api/cards/{id}` - Get specific flashcard
-
-### Sound It Out
-- `GET /api/soundout` - Get all words
-- `GET /api/soundout/{id}` - Get specific word
-
-### Games
-- `GET /api/game/hungry-monster` - Get monster questions
-- `GET /api/game/hungry-monster/{id}` - Get specific question
-- `POST /api/game/hungry-monster/submit` - Submit answer
-- `GET /api/game/minimal-pairs` - Get minimal pair exercises
-- `GET /api/game/minimal-pairs/{id}` - Get specific exercise
-
-### Health
-- `GET /health` - Service health check
-
----
-
-## 🎨 Design Principles
-
-1. **Mobile-First**: Optimized for touch interactions
-2. **Lightweight**: Minimal dependencies, fast load times
-3. **Accessible**: ARIA labels, keyboard navigation
-4. **Engaging**: Animations, feedback, and gamification
-5. **Progressive**: Guides learners through competence stages
-
----
-
-## 🛠️ Development
-
-### Requirements
-- Python 3.8+
-- Modern web browser
-- Terminal/Command prompt
-
-### Adding New Content
-
-1. **Flashcards**: Add entries to `backend/data/flashcards.json`
-2. **Words**: Update `backend/data/soundout.json`
-3. **Games**: Modify `backend/data/hungry_monster.json` or `minimal_pairs.json`
-4. **Assets**: Add images to `assets/images/` and audio to `assets/audio/`
-
-### Running in Development Mode
-
-The `--reload` flag enables auto-reload on code changes:
-
-```bash
-uvicorn app.main:app --reload
-```
-
----
-
-## 📦 Deployment
-
-### Production Considerations
-
-1. Replace JSON storage with a database (PostgreSQL, MongoDB)
-2. Add authentication and authorization
-3. Implement rate limiting
-4. Enable HTTPS/SSL
-5. Configure CORS for specific domains
-6. Add logging and monitoring
-7. Set up CDN for assets
-
-### Environment Variables
-
-Create a `.env` file:
-
-```
-ENVIRONMENT=production
-PORT=8000
-HOST=0.0.0.0
-```
-
----
-
-## 📝 Week 6 Deliverables
-
-This implementation represents the complete Week 6 hackathon deliverable:
-
-✅ User authentication (guest login)  
-✅ Interactive Phonics Flashcards  
-✅ Sound It Out (phonetic blending)  
-✅ Hungry Monster Story Game  
-✅ Minimal Pair Sorter  
-✅ Mobile-responsive UI  
-✅ REST API with FastAPI  
-✅ Static file serving  
-✅ Docker support  
-✅ Startup script  
-
----
-
-## 🤝 Contributing
-
-See [CONTRIBUTING.md](CONTRIBUTING.md) for contribution guidelines.
-
----
-
-## 📄 License
-
-This project is part of the Chunjae Bootcamp educational program.
 
 ---
 
 ## 👥 Team
 
-**Team A - SoundSteps**
-- Dikshya Rai
-- Binam Poudel
-- Nikesh Rajbanshi
-
-**Bootcamp**: Chunjae Bootcamp 2025-2026  
-**Project**: Magic Maker Studio v1.1  
+**Team A - Chunjae Bootcamp**
 
 ---
 
-## 🆘 Troubleshooting
+## 📄 License
 
-### Port Already in Use
-```bash
-# Kill process on port 8000
-kill -9 $(lsof -ti:8000)
-```
-
-### Virtual Environment Issues
-```bash
-# Remove and recreate venv
-rm -rf backend/venv
-python3 -m venv backend/venv
-```
-
-### Missing Dependencies
-```bash
-# Reinstall all dependencies
-pip install -r backend/requirements.txt --force-reinstall
-```
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ---
+
+<div align="center">
+
+**Made with ❤️ for learners everywhere**
+
+🎵 *Learning phonics, one sound at a time* 🎵
+
+</div>
 

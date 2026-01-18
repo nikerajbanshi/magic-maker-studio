@@ -13,7 +13,6 @@ services:
     volumes:
       - ./backend:/app/backend
       - ./static:/app/static
-      - ./assets:/app/assets
     environment:
       - ENVIRONMENT=development
       - DEBUG=true

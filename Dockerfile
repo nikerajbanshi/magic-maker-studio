@@ -3,8 +3,8 @@
 
 FROM python:3.11-slim
 
-# Set working directory
-WORKDIR /app
+# Set working directory to backend folder
+WORKDIR /app/backend
 
 # Install system dependencies
 RUN apt-get update && apt-get install -y \
@@ -18,12 +18,11 @@ RUN groupadd -r appgroup && useradd -r -g appgroup appuser
 
 # Copy backend requirements and install Python dependencies
 COPY backend/requirements.txt /app/backend/requirements.txt
-RUN pip install --no-cache-dir -r backend/requirements.txt
+RUN pip install --no-cache-dir -r /app/backend/requirements.txt
 
 # Copy application code
 COPY backend/ /app/backend/
 COPY static/ /app/static/
-COPY assets/ /app/assets/
 
 # Set ownership to non-root user
 RUN chown -R appuser:appgroup /app
@@ -32,7 +31,7 @@ RUN chown -R appuser:appgroup /app
 USER appuser
 
 # Set environment variables
-ENV PYTHONPATH=/app
+ENV PYTHONPATH=/app/backend
 ENV PYTHONDONTWRITEBYTECODE=1
 ENV PYTHONUNBUFFERED=1
 
@@ -43,5 +42,5 @@ EXPOSE 8000
 HEALTHCHECK --interval=30s --timeout=3s --start-period=5s --retries=3 \
     CMD curl -f http://localhost:8000/health || exit 1
 
-# Run the application
-CMD ["uvicorn", "backend.app.main:app", "--host", "0.0.0.0", "--port", "8000"]
+# Run the application from /app/backend
+CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "8000"]
