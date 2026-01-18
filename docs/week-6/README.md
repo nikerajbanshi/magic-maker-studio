@@ -6,7 +6,7 @@
 
 ---
 
-## 📋 Assignment Checklist
+
 
 | Requirement | Status | Details |
 |-------------|--------|---------|
