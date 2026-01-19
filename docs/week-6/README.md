@@ -6,7 +6,7 @@
 
 ---
 
-
+## 📋 Assignment Checklist
 
 | Requirement | Status | Details |
 |-------------|--------|---------|
@@ -190,8 +190,8 @@ https://soundsteps-production.up.railway.app
 | Sound It Out | ✅ Working | 30 words with segmented/blended audio + speech recognition |
 | Hungry Monster | ✅ Working | Visual phonics game with confetti rewards |
 | Minimal Pairs | ✅ Working | Drag-drop sorting (/p/-/b/, /t/-/d/, etc.) |
-| Progress Tracking | ✅ On-progress | XP, streaks, skill badges |
-| Leaderboard | ✅ On-progress | Competitive rankings |
+| Progress Tracking | ✅ Working | XP, streaks, skill badges |
+| Leaderboard | ✅ Working | Competitive rankings |
 
 ### Screenshots
 
@@ -266,7 +266,7 @@ magic-maker-studio/
 │   ├── styles.css          # Styling
 │   ├── app.js              # Main JavaScript
 │   ├── services/           # JS service modules
-│   └── assets/             # Images & audio (Images are yet to be fully added)
+│   └── assets/             # Images & audio
 ├── docs/                    # Documentation
 │   └── week-6/             # This deliverable
 ├── Dockerfile              # Container configuration
@@ -329,7 +329,7 @@ SoundSteps demonstrates a complete web application deployment pipeline:
 - **API:** RESTful endpoints for authentication and learning modules
 - **Deployment:** Docker-based deployment ready for Railway
 
-The prototype is bound to be fully functional with four interactive learning modules, progress tracking, and gamification features. Ready for public deployment on hackathon day presentation.
+The prototype is fully functional with four interactive learning modules, progress tracking, and gamification features. Ready for public deployment on hackathon day 1.
 
 ---
 
