@@ -1,0 +1,178 @@
+[
+  {
+    "id": 1,
+    "word": "cat",
+    "phonemes": ["c", "a", "t"],
+    "segmentedAudio": "/assets/audio/cat-segmented.mp3",
+    "blendedAudio": "/assets/audio/cat-blended.mp3",
+    "image": "/assets/images/cat.webp"
+  },
+  {
+    "id": 2,
+    "word": "dog",
+    "phonemes": ["d", "o", "g"],
+    "segmentedAudio": "/assets/audio/dog-segmented.mp3",
+    "blendedAudio": "/assets/audio/dog-blended.mp3",
+    "image": "/assets/images/dog.webp"
+  },
+  {
+    "id": 3,
+    "word": "bat",
+    "phonemes": ["b", "a", "t"],
+    "segmentedAudio": "/assets/audio/bat-segmented.mp3",
+    "blendedAudio": "/assets/audio/bat-blended.mp3",
+    "image": "/assets/images/bat.webp"
+  },
+  {
+    "id": 4,
+    "word": "pen",
+    "phonemes": ["p", "e", "n"],
+    "segmentedAudio": "/assets/audio/pen-segmented.mp3",
+    "blendedAudio": "/assets/audio/pen-blended.mp3",
+    "image": "/assets/images/pen.webp"
+  },
+  {
+    "id": 5,
+    "word": "sun",
+    "phonemes": ["s", "u", "n"],
+    "segmentedAudio": "/assets/audio/sun-segmented.mp3",
+    "blendedAudio": "/assets/audio/sun-blended.mp3",
+    "image": "/assets/images/sun.webp"
+  },
+  {
+    "id": 6,
+    "word": "hat",
+    "phonemes": ["h", "a", "t"],
+    "segmentedAudio": "/assets/audio/hat-segmented.mp3",
+    "blendedAudio": "/assets/audio/hat-blended.mp3",
+    "image": "/assets/images/hat.webp"
+  },
+  {
+    "id": 7,
+    "word": "bed",
+    "phonemes": ["b", "e", "d"],
+    "segmentedAudio": "/assets/audio/bed-segmented.mp3",
+    "blendedAudio": "/assets/audio/bed-blended.mp3",
+    "image": "/assets/images/bed.webp"
+  },
+  {
+    "id": 8,
+    "word": "pig",
+    "phonemes": ["p", "i", "g"],
+    "segmentedAudio": "/assets/audio/pig-segmented.mp3",
+    "blendedAudio": "/assets/audio/pig-blended.mp3",
+    "image": "/assets/images/pig.webp"
+  },
+  {
+    "id": 9,
+    "word": "fox",
+    "phonemes": ["f", "o", "x"],
+    "segmentedAudio": "/assets/audio/fox-segmented.mp3",
+    "blendedAudio": "/assets/audio/fox-blended.mp3",
+    "image": "/assets/images/fox.webp"
+  },
+  {
+    "id": 10,
+    "word": "bus",
+    "phonemes": ["b", "u", "s"],
+    "segmentedAudio": "/assets/audio/bus-segmented.mp3",
+    "blendedAudio": "/assets/audio/bus-blended.mp3",
+    "image": "/assets/images/bus.webp"
+  },
+  {
+    "id": 11,
+    "word": "cup",
+    "phonemes": ["c", "u", "p"],
+    "segmentedAudio": "/assets/audio/cup-segmented.mp3",
+    "blendedAudio": "/assets/audio/cup-blended.mp3",
+    "image": "/assets/images/cup.webp"
+  },
+  {
+    "id": 12,
+    "word": "red",
+    "phonemes": ["r", "e", "d"],
+    "segmentedAudio": "/assets/audio/red-segmented.mp3",
+    "blendedAudio": "/assets/audio/red-blended.mp3",
+    "image": "/assets/images/red.webp"
+  },
+  {
+    "id": 13,
+    "word": "net",
+    "phonemes": ["n", "e", "t"],
+    "segmentedAudio": "/assets/audio/net-segmented.mp3",
+    "blendedAudio": "/assets/audio/net-blended.mp3",
+    "image": "/assets/images/net.webp"
+  },
+  {
+    "id": 14,
+    "word": "wet",
+    "phonemes": ["w", "e", "t"],
+    "segmentedAudio": "/assets/audio/wet-segmented.mp3",
+    "blendedAudio": "/assets/audio/wet-blended.mp3",
+    "image": "/assets/images/wet.webp"
+  },
+  {
+    "id": 15,
+    "word": "hop",
+    "phonemes": ["h", "o", "p"],
+    "segmentedAudio": "/assets/audio/hop-segmented.mp3",
+    "blendedAudio": "/assets/audio/hop-blended.mp3",
+    "image": "/assets/images/hop.webp"
+  },
+  {
+    "id": 16,
+    "word": "leg",
+    "phonemes": ["l", "e", "g"],
+    "segmentedAudio": "/assets/audio/leg-segmented.mp3",
+    "blendedAudio": "/assets/audio/leg-blended.mp3",
+    "image": "/assets/images/leg.webp"
+  },
+  {
+    "id": 17,
+    "word": "map",
+    "phonemes": ["m", "a", "p"],
+    "segmentedAudio": "/assets/audio/map-segmented.mp3",
+    "blendedAudio": "/assets/audio/map-blended.mp3",
+    "image": "/assets/images/map.webp"
+  },
+  {
+    "id": 18,
+    "word": "top",
+    "phonemes": ["t", "o", "p"],
+    "segmentedAudio": "/assets/audio/top-segmented.mp3",
+    "blendedAudio": "/assets/audio/top-blended.mp3",
+    "image": "/assets/images/top.webp"
+  },
+  {
+    "id": 19,
+    "word": "zip",
+    "phonemes": ["z", "i", "p"],
+    "segmentedAudio": "/assets/audio/zip-segmented.mp3",
+    "blendedAudio": "/assets/audio/zip-blended.mp3",
+    "image": "/assets/images/zip.webp"
+  },
+  {
+    "id": 20,
+    "word": "fun",
+    "phonemes": ["f", "u", "n"],
+    "segmentedAudio": "/assets/audio/fun-segmented.mp3",
+    "blendedAudio": "/assets/audio/fun-blended.mp3",
+    "image": "/assets/images/fun.webp"
+  },
+  {
+    "id": 21,
+    "word": "run",
+    "phonemes": ["r", "u", "n"],
+    "segmentedAudio": "/assets/audio/run-segmented.mp3",
+    "blendedAudio": "/assets/audio/run-blended.mp3",
+    "image": "/assets/images/run.webp"
+  },
+  {
+    "id": 22,
+    "word": "van",
+    "phonemes": ["v", "a", "n"],
+    "segmentedAudio": "/assets/audio/van-segmented.mp3",
+    "blendedAudio": "/assets/audio/van-blended.mp3",
+    "image": "/assets/images/van.webp"
+  }
+]

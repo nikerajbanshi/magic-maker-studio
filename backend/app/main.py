@@ -1,46 +1,90 @@
 from fastapi import FastAPI
-from app.routes import health
+from fastapi.staticfiles import StaticFiles
+from fastapi.responses import FileResponse
+from fastapi.middleware.cors import CORSMiddleware
+from app.routes import health, user, auth
 from app.routers.phonics import flashcards, sound_out, games, progress
+import os
 
 app = FastAPI(
-    title="Magic Maker Studio API",
-    description="Backend foundation for the Creative Learning Sandbox",
-    version="1.0.0"
+    title="SoundSteps API",
+    description="Backend API for SoundSteps - Interactive Phonics Learning Platform",
+    version="1.1.0"
+)
+
+# CORS middleware (allow frontend to access API)
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],  # In production, replace with specific origins
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
 )
 
 # System routes
 app.include_router(health.router)
 
-# Phonics feature routes (Week 3 scaffolding)
+# Authentication routes
+app.include_router(
+    auth.router,
+    prefix="/api/auth",
+    tags=["Authentication"]
+)
+
+# User session routes
+app.include_router(
+    user.router,
+    prefix="/api/user",
+    tags=["User"]
+)
+
+# Phonics feature routes
 app.include_router(
     flashcards.router,
-    prefix="/api/phonics/flashcards",
+    prefix="/api/cards",
     tags=["Flashcards"]
 )
 
 app.include_router(
     sound_out.router,
-    prefix="/api/phonics/sound-out",
+    prefix="/api/soundout",
     tags=["Sound Out"]
 )
 
 app.include_router(
     games.router,
-    prefix="/api/phonics/games",
+    prefix="/api/game",
     tags=["Games"]
 )
 
 app.include_router(
     progress.router,
-    prefix="/api/phonics/progress",
+    prefix="/api/progress",
     tags=["Progress"]
 )
 
+# Serve static files (frontend and assets)
+static_dir = os.path.join(os.path.dirname(__file__), "../../static")
+# Assets are now consolidated under static/assets/
+assets_dir = os.path.join(os.path.dirname(__file__), "../../static/assets")
+
+if os.path.exists(static_dir):
+    app.mount("/static", StaticFiles(directory=static_dir), name="static")
+if os.path.exists(assets_dir):
+    # Mount assets at /assets for backwards compatibility with existing data files
+    app.mount("/assets", StaticFiles(directory=assets_dir), name="assets")
 
 @app.get("/", tags=["Root"])
 async def root():
+    """
+    Serve the main frontend application.
+    """
+    index_path = os.path.join(static_dir, "index.html")
+    if os.path.exists(index_path):
+        return FileResponse(index_path)
+    
     return {
-        "message": "Welcome to Magic Maker Studio",
+        "message": "Welcome to SoundSteps API",
         "docs": "/docs",
-        "status": "Ready to build"
+        "status": "Ready"
     }

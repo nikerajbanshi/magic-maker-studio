@@ -1,0 +1,53 @@
+# SoundSteps - Docker Compose Configuration
+# Magic Maker Studio - Phonics Learning Platform
+
+version: '3.8'
+
+services:
+  # Development mode - with hot reload
+  soundsteps:
+    build: .
+    container_name: soundsteps-app
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./backend:/app/backend
+      - ./static:/app/static
+    environment:
+      - ENVIRONMENT=development
+      - DEBUG=true
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:8000/health')"]
+      interval: 30s
+      timeout: 3s
+      retries: 3
+      start_period: 5s
+    profiles:
+      - dev
+
+  # Production mode - optimized build
+  soundsteps-prod:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: soundsteps-prod
+    ports:
+      - "8000:8000"
+    environment:
+      - ENVIRONMENT=production
+      - DEBUG=false
+    restart: always
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:8000/health')"]
+      interval: 30s
+      timeout: 3s
+      retries: 3
+      start_period: 10s
+    profiles:
+      - prod
+
+# Usage:
+# Development: docker compose --profile dev up --build
+# Production:  docker compose --profile prod up --build -d
+# Default (no profile): docker compose up --build

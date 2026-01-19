@@ -1,0 +1,62 @@
+[
+  {
+    "id": 1,
+    "category": "/p/ vs /b/",
+    "words": [
+      {
+        "word": "pat",
+        "phoneme": "/p/",
+        "audio": "/assets/audio/pat.mp3",
+        "image": "/assets/images/pat.webp"
+      },
+      {
+        "word": "bat",
+        "phoneme": "/b/",
+        "audio": "/assets/audio/bat.mp3",
+        "image": "/assets/images/bat.webp"
+      },
+      {
+        "word": "pen",
+        "phoneme": "/p/",
+        "audio": "/assets/audio/pen.mp3",
+        "image": "/assets/images/pen.webp"
+      },
+      {
+        "word": "ben",
+        "phoneme": "/b/",
+        "audio": "/assets/audio/ben.mp3",
+        "image": "/assets/images/ben.webp"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "category": "/t/ vs /d/",
+    "words": [
+      {
+        "word": "ten",
+        "phoneme": "/t/",
+        "audio": "/assets/audio/ten.mp3",
+        "image": "/assets/images/ten.webp"
+      },
+      {
+        "word": "den",
+        "phoneme": "/d/",
+        "audio": "/assets/audio/den.mp3",
+        "image": "/assets/images/den.webp"
+      },
+      {
+        "word": "tap",
+        "phoneme": "/t/",
+        "audio": "/assets/audio/tap.mp3",
+        "image": "/assets/images/tap.webp"
+      },
+      {
+        "word": "dap",
+        "phoneme": "/d/",
+        "audio": "/assets/audio/dap.mp3",
+        "image": "/assets/images/dap.webp"
+      }
+    ]
+  }
+]
