@@ -1,0 +1,98 @@
+[
+  {
+    "id": 1,
+    "pair": ["sheep", "ship"],
+    "vowelType": "Long vs Short /i/",
+    "description": "Long 'ee' sound vs Short 'i' sound",
+    "words": {
+      "sheep": {
+        "audio": "/assets/audio/sheep-word.mp3",
+        "mouthPosition": "stretched",
+        "mouthDescription": "Lips stretched wide like a smile",
+        "mouthEmoji": "😁",
+        "phoneme": "/iː/",
+        "tip": "Stretch your lips wide and say 'ee' for a long time!"
+      },
+      "ship": {
+        "audio": "/assets/audio/ship-word.mp3",
+        "mouthPosition": "slightly_open",
+        "mouthDescription": "Lips slightly open and relaxed",
+        "mouthEmoji": "😐",
+        "phoneme": "/ɪ/",
+        "tip": "Relax your lips and make a short 'i' sound."
+      }
+    }
+  },
+  {
+    "id": 2,
+    "pair": ["beat", "bit"],
+    "vowelType": "Long vs Short /i/",
+    "description": "Long 'ee' sound vs Short 'i' sound",
+    "words": {
+      "beat": {
+        "audio": "/assets/audio/beat-word.mp3",
+        "mouthPosition": "stretched",
+        "mouthDescription": "Lips stretched wide",
+        "mouthEmoji": "😁",
+        "phoneme": "/iː/",
+        "tip": "Stretch your lips and hold the 'ee' sound!"
+      },
+      "bit": {
+        "audio": "/assets/audio/bit-word.mp3",
+        "mouthPosition": "relaxed",
+        "mouthDescription": "Lips relaxed and slightly open",
+        "mouthEmoji": "😐",
+        "phoneme": "/ɪ/",
+        "tip": "Keep lips relaxed for a quick 'i' sound."
+      }
+    }
+  },
+  {
+    "id": 3,
+    "pair": ["feet", "fit"],
+    "vowelType": "Long vs Short /i/",
+    "description": "Long 'ee' sound vs Short 'i' sound",
+    "words": {
+      "feet": {
+        "audio": "/assets/audio/feet-word.mp3",
+        "mouthPosition": "stretched",
+        "mouthDescription": "Lips stretched into a smile",
+        "mouthEmoji": "😁",
+        "phoneme": "/iː/",
+        "tip": "Smile wide and say 'ee' like you're happy!"
+      },
+      "fit": {
+        "audio": "/assets/audio/fit-word.mp3",
+        "mouthPosition": "relaxed",
+        "mouthDescription": "Lips neutral and relaxed",
+        "mouthEmoji": "😐",
+        "phoneme": "/ɪ/",
+        "tip": "Relax your face and make a short sound."
+      }
+    }
+  },
+  {
+    "id": 4,
+    "pair": ["leave", "live"],
+    "vowelType": "Long vs Short /i/",
+    "description": "Long 'ee' sound vs Short 'i' sound",
+    "words": {
+      "leave": {
+        "audio": "/assets/audio/leave-word.mp3",
+        "mouthPosition": "stretched",
+        "mouthDescription": "Lips pulled back wide",
+        "mouthEmoji": "😁",
+        "phoneme": "/iː/",
+        "tip": "Pull your lips back like saying 'cheese'!"
+      },
+      "live": {
+        "audio": "/assets/audio/live-word.mp3",
+        "mouthPosition": "relaxed",
+        "mouthDescription": "Lips in natural position",
+        "mouthEmoji": "😐",
+        "phoneme": "/ɪ/",
+        "tip": "Keep your mouth relaxed and natural."
+      }
+    }
+  }
+]

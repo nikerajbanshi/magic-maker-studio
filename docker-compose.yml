@@ -1,15 +1,38 @@
 # SoundSteps - Docker Compose Configuration
 # Magic Maker Studio - Phonics Learning Platform
+# Deploy to: user1@192.168.1.140 - /home/user1/projects/
 
-version: '3.8'
+version: "3.8"
 
 services:
-  # Development mode - with hot reload
+  # Main production service (default)
   soundsteps:
-    build: .
+    build:
+      context: .
+      dockerfile: Dockerfile
     container_name: soundsteps-app
     ports:
       - "8000:8000"
+    environment:
+      - ENVIRONMENT=production
+      - DEBUG=false
+      - PYTHONUNBUFFERED=1
+    restart: always
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 15s
+    networks:
+      - soundsteps-network
+
+  # Development mode - with hot reload and volumes
+  soundsteps-dev:
+    build: .
+    container_name: soundsteps-dev
+    ports:
+      - "8001:8000"
     volumes:
       - ./backend:/app/backend
       - ./static:/app/static
@@ -18,36 +41,46 @@ services:
       - DEBUG=true
     restart: unless-stopped
     healthcheck:
-      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:8000/health')"]
+      test: ["CMD", "curl", "-f", "http://localhost:8000/health"]
       interval: 30s
       timeout: 3s
       retries: 3
       start_period: 5s
     profiles:
       - dev
+    networks:
+      - soundsteps-network
 
-  # Production mode - optimized build
-  soundsteps-prod:
-    build:
-      context: .
-      dockerfile: Dockerfile
-    container_name: soundsteps-prod
-    ports:
-      - "8000:8000"
-    environment:
-      - ENVIRONMENT=production
-      - DEBUG=false
-    restart: always
-    healthcheck:
-      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:8000/health')"]
-      interval: 30s
-      timeout: 3s
-      retries: 3
-      start_period: 10s
-    profiles:
-      - prod
+networks:
+  soundsteps-network:
+    driver: bridge
 
-# Usage:
-# Development: docker compose --profile dev up --build
-# Production:  docker compose --profile prod up --build -d
-# Default (no profile): docker compose up --build
+# ============================================
+# DEPLOYMENT INSTRUCTIONS FOR UBUNTU SERVER
+# ============================================
+#
+# Server: user1@192.168.1.140
+# Path: /home/user1/projects/soundsteps/
+#
+# 1. Copy files to server:
+#    scp -r magic-maker-studio/* user1@192.168.1.140:~/projects/soundsteps/
+#
+# 2. SSH into server:
+#    ssh user1@192.168.1.140
+#
+# 3. Navigate to project:
+#    cd ~/projects/soundsteps
+#
+# 4. Build and run (production):
+#    docker compose up --build -d
+#
+# 5. View logs:
+#    docker compose logs -f
+#
+# 6. Stop:
+#    docker compose down
+#
+# 7. Development mode (port 8001):
+#    docker compose --profile dev up --build
+#
+# Access: http://192.168.1.140:8000

@@ -1,0 +1,68 @@
+[
+  {
+    "id": 1,
+    "image": "/assets/images/bat.webp",
+    "correctWord": "bat",
+    "options": ["bat", "bet"],
+    "audio": {
+      "bat": "/assets/audio/bat.mp3",
+      "bet": "/assets/audio/bed.mp3"
+    },
+    "hint": "This animal flies at night!"
+  },
+  {
+    "id": 2,
+    "image": "/assets/images/cat.webp",
+    "correctWord": "cat",
+    "options": ["cat", "cot"],
+    "audio": {
+      "cat": "/assets/audio/cat.mp3",
+      "cot": "/assets/audio/cot.mp3"
+    },
+    "hint": "This furry pet says 'meow'!"
+  },
+  {
+    "id": 3,
+    "image": "/assets/images/hat.webp",
+    "correctWord": "hat",
+    "options": ["hat", "hot"],
+    "audio": {
+      "hat": "/assets/audio/hat.mp3",
+      "hot": "/assets/audio/hot.mp3"
+    },
+    "hint": "You wear this on your head!"
+  },
+  {
+    "id": 4,
+    "image": "/assets/images/pen.webp",
+    "correctWord": "pen",
+    "options": ["pen", "pan"],
+    "audio": {
+      "pen": "/assets/audio/pen.mp3",
+      "pan": "/assets/audio/pan.mp3"
+    },
+    "hint": "You write with this!"
+  },
+  {
+    "id": 5,
+    "image": "/assets/images/sun.webp",
+    "correctWord": "sun",
+    "options": ["sun", "son"],
+    "audio": {
+      "sun": "/assets/audio/sun.mp3",
+      "son": "/assets/audio/sun.mp3"
+    },
+    "hint": "This is bright and yellow in the sky!"
+  },
+  {
+    "id": 6,
+    "image": "/assets/images/pig.webp",
+    "correctWord": "pig",
+    "options": ["pig", "peg"],
+    "audio": {
+      "pig": "/assets/audio/pig.mp3",
+      "peg": "/assets/audio/pen.mp3"
+    },
+    "hint": "This pink farm animal says 'oink'!"
+  }
+]

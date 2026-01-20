@@ -1,0 +1,64 @@
+{
+  "modules": {
+    "flashcards": {
+      "xp": 100,
+      "achievement": {
+        "id": "alphabet_master",
+        "name": "Alphabet Master",
+        "description": "Completed all flashcards A-Z",
+        "icon": "🔤"
+      }
+    },
+    "soundout": {
+      "xp": 150,
+      "achievement": {
+        "id": "sound_blender",
+        "name": "Sound Blender",
+        "description": "Mastered sound blending",
+        "icon": "🔊"
+      }
+    },
+    "pairs": {
+      "xp": 200,
+      "achievement": {
+        "id": "phoneme_detective",
+        "name": "Phoneme Detective",
+        "description": "Distinguished all minimal pairs",
+        "icon": "🔍"
+      }
+    },
+    "mouthMoves": {
+      "xp": 150,
+      "achievement": {
+        "id": "pronunciation_pro",
+        "name": "Pronunciation Pro",
+        "description": "Learned mouth positioning",
+        "icon": "👄"
+      }
+    },
+    "homophoneQuiz": {
+      "xp": 200,
+      "achievement": {
+        "id": "word_wizard",
+        "name": "Word Wizard",
+        "description": "Aced the homophone quiz",
+        "icon": "🧙"
+      }
+    },
+    "monster": {
+      "xp": 150,
+      "achievement": {
+        "id": "monster_feeder",
+        "name": "Monster Feeder",
+        "description": "Fed the hungry monster",
+        "icon": "👾"
+      }
+    }
+  },
+  "streaks": {
+    "3_day": { "xp": 50, "name": "On Fire!", "icon": "🔥" },
+    "7_day": { "xp": 150, "name": "Week Warrior", "icon": "⚔️" },
+    "30_day": { "xp": 500, "name": "Monthly Master", "icon": "👑" }
+  },
+  "xpPerLevel": 500
+}
