@@ -94,9 +94,11 @@ REM ============================================
 echo [3/5] Preparing server port...
 
 REM Find and kill process on port 8000
-for /f "tokens=5" %%a in ('netstat -aon ^| findstr ":8000" ^| findstr "LISTENING"') do (
-    echo   Stopping existing process on port 8000 (PID: %%a)...
-    taskkill /F /PID %%a >nul 2>&1
+set "PORT_PID="
+for /f "tokens=5" %%a in ('netstat -aon 2^>nul ^| findstr ":8000 " ^| findstr "LISTENING"') do set "PORT_PID=%%a"
+if defined PORT_PID (
+    echo   Stopping existing process on port 8000 PID: !PORT_PID!...
+    taskkill /F /PID !PORT_PID! >nul 2>&1
 )
 echo   [OK] Port 8000 ready
 echo.
@@ -130,24 +132,28 @@ echo.
 REM ============================================
 REM STEP 5: Build Docker Container (if available)
 REM ============================================
-if "%DOCKER_AVAILABLE%"=="true" (
-    echo [5/5] Building Docker container...
-    
-    REM Stop existing container
-    docker stop soundsteps-app >nul 2>&1
-    docker rm soundsteps-app >nul 2>&1
-    
-    REM Build image
-    echo   Building Docker image (this may take a minute)...
-    docker build -t soundsteps . -q
-    echo   [OK] Docker image built
-    echo   [OK] Docker ready for deployment
-    echo.
-) else (
-    echo [5/5] Skipping Docker (not available)...
-    echo   [!] Install Docker Desktop to test containerized deployment
-    echo.
-)
+if not "%DOCKER_AVAILABLE%"=="true" goto :skip_docker
+
+echo [5/5] Building Docker container...
+
+:: Stop existing container
+docker stop soundsteps-app >nul 2>&1
+docker rm soundsteps-app >nul 2>&1
+
+:: Build image
+echo   Building Docker image - this may take a minute...
+docker build -t soundsteps . -q
+echo   [OK] Docker image built
+echo   [OK] Docker ready for deployment
+echo.
+goto :after_docker
+
+:skip_docker
+echo [5/5] Skipping Docker - not available...
+echo   [!] Install Docker Desktop to test containerized deployment
+echo.
+
+:after_docker
 
 REM ============================================
 REM SUCCESS!

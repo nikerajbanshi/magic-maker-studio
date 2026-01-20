@@ -3,13 +3,14 @@ from fastapi.staticfiles import StaticFiles
 from fastapi.responses import FileResponse
 from fastapi.middleware.cors import CORSMiddleware
 from app.routes import health, user, auth
-from app.routers.phonics import flashcards, sound_out, games, progress
+from app.routers.phonics import flashcards, sound_out, games, progress, mouth_moves, homophone_quiz
+from app.routers import achievements
 import os
 
 app = FastAPI(
     title="SoundSteps API",
     description="Backend API for SoundSteps - Interactive Phonics Learning Platform",
-    version="1.1.0"
+    version="1.2.0"
 )
 
 # CORS middleware (allow frontend to access API)
@@ -61,6 +62,27 @@ app.include_router(
     progress.router,
     prefix="/api/progress",
     tags=["Progress"]
+)
+
+# Mouth Moves module
+app.include_router(
+    mouth_moves.router,
+    prefix="/api/mouth-moves",
+    tags=["Mouth Moves"]
+)
+
+# Homophone Quiz module
+app.include_router(
+    homophone_quiz.router,
+    prefix="/api/homophone-quiz",
+    tags=["Homophone Quiz"]
+)
+
+# Achievements module
+app.include_router(
+    achievements.router,
+    prefix="/api/achievements",
+    tags=["Achievements"]
 )
 
 # Serve static files (frontend and assets)

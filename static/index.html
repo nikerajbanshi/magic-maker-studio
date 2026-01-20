@@ -1,352 +1,585 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="SoundSteps - Interactive Phonics Learning Platform">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="SoundSteps - Interactive Phonics Learning Platform"
+    />
     <title>SoundSteps - Learn Phonics the Fun Way</title>
-    <link rel="stylesheet" href="/static/styles.css?v=6">
+    <link rel="stylesheet" href="/static/styles.css?v=7" />
     <!-- Services -->
-    <script src="/static/services/authService.js?v=6"></script>
-    <script src="/static/services/progressService.js?v=6"></script>
-    <script src="/static/services/leaderboardService.js?v=6"></script>
-    <script src="/static/services/feedbackService.js?v=6"></script>
+    <script src="/static/services/authService.js?v=7"></script>
+    <script src="/static/services/progressService.js?v=7"></script>
+    <script src="/static/services/leaderboardService.js?v=7"></script>
+    <script src="/static/services/feedbackService.js?v=7"></script>
+    <script src="/static/services/progressManager.js?v=7"></script>
     <!-- Auth Components -->
-    <script src="/static/components/authUI.js?v=6"></script>
-    <script src="/static/init.js?v=6"></script>
+    <script src="/static/components/authUI.js?v=7"></script>
+    <script src="/static/init.js?v=7"></script>
     <!-- Main App -->
-    <script src="/static/app.js?v=6" defer></script>
-</head>
-<body>
+    <script src="/static/app.js?v=7" defer></script>
+  </head>
+  <body>
     <!-- Main Container -->
     <main class="app-container" id="appContainer">
-        
-        <!-- Auth Screen (Login/Register) -->
-        <div class="auth-screen" id="authScreen">
-            <div class="auth-content" id="authContent">
-                <!-- Auth UI will be rendered here by authUI.js -->
+      <!-- Auth Screen (Login/Register) -->
+      <div class="auth-screen" id="authScreen">
+        <div class="auth-content" id="authContent">
+          <!-- Auth UI will be rendered here by authUI.js -->
+        </div>
+      </div>
+
+      <!-- Start Screen (Legacy - Now handled by auth) -->
+      <div class="screen hidden" id="startScreen">
+        <div class="start-content">
+          <div class="logo">
+            <h1 class="brand-title">SoundSteps</h1>
+            <span class="sparkle">✨</span>
+          </div>
+          <p class="tagline">Learn phonics the fun way!</p>
+
+          <div class="start-form">
+            <input
+              type="text"
+              id="userName"
+              placeholder="Enter your name (optional)"
+              class="name-input"
+              maxlength="20"
+            />
+            <button id="startBtn" class="btn btn-primary btn-large">
+              Start Learning
+            </button>
+          </div>
+
+          <div class="features-preview">
+            <div class="feature-item">📚 Flashcards</div>
+            <div class="feature-item">🔊 Sound It Out</div>
+            <div class="feature-item">👾 Games</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Dashboard/Navigation Screen -->
+      <div class="screen hidden" id="dashboardScreen">
+        <header class="header">
+          <button class="home-btn" id="homeBtn" aria-label="Home">
+            <svg class="home-icon" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z" />
+            </svg>
+          </button>
+          <span class="brand-name"
+            >SoundSteps <span class="sparkle">✨</span></span
+          >
+          <div class="header-right">
+            <span class="user-badge" id="userBadge"></span>
+            <button class="logout-btn" id="logoutBtn" aria-label="Logout">
+              <svg
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                width="20"
+                height="20"
+              >
+                <path
+                  d="M17 7l-1.41 1.41L18.17 11H8v2h10.17l-2.58 2.58L17 17l5-5zM4 5h8V3H4c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h8v-2H4V5z"
+                />
+              </svg>
+            </button>
+          </div>
+        </header>
+
+        <div class="dashboard-content">
+          <h2 class="welcome-message" id="welcomeMessage">Welcome!</h2>
+
+          <!-- User Stats Section -->
+          <div class="user-stats-row">
+            <div class="stat-card">
+              <span class="stat-icon">⭐</span>
+              <span class="stat-value" id="totalPoints">0</span>
+              <span class="stat-label">XP</span>
             </div>
-        </div>
-
-        <!-- Start Screen (Legacy - Now handled by auth) -->
-        <div class="screen hidden" id="startScreen">
-            <div class="start-content">
-                <div class="logo">
-                    <h1 class="brand-title">SoundSteps</h1>
-                    <span class="sparkle">✨</span>
-                </div>
-                <p class="tagline">Learn phonics the fun way!</p>
-                
-                <div class="start-form">
-                    <input 
-                        type="text" 
-                        id="userName" 
-                        placeholder="Enter your name (optional)"
-                        class="name-input"
-                        maxlength="20"
-                    >
-                    <button id="startBtn" class="btn btn-primary btn-large">
-                        Start Learning
-                    </button>
-                </div>
-                
-                <div class="features-preview">
-                    <div class="feature-item">📚 Flashcards</div>
-                    <div class="feature-item">🔊 Sound It Out</div>
-                    <div class="feature-item">👾 Games</div>
-                </div>
+            <div class="stat-card">
+              <span class="stat-icon">📊</span>
+              <span class="stat-value" id="userLevel">1</span>
+              <span class="stat-label">Level</span>
             </div>
-        </div>
-
-        <!-- Dashboard/Navigation Screen -->
-        <div class="screen hidden" id="dashboardScreen">
-            <header class="header">
-                <button class="home-btn" id="homeBtn" aria-label="Home">
-                    <svg class="home-icon" viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/>
-                    </svg>
-                </button>
-                <span class="brand-name">SoundSteps <span class="sparkle">✨</span></span>
-                <div class="header-right">
-                    <span class="user-badge" id="userBadge"></span>
-                    <button class="logout-btn" id="logoutBtn" aria-label="Logout">
-                        <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20">
-                            <path d="M17 7l-1.41 1.41L18.17 11H8v2h10.17l-2.58 2.58L17 17l5-5zM4 5h8V3H4c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h8v-2H4V5z"/>
-                        </svg>
-                    </button>
-                </div>
-            </header>
-
-            <div class="dashboard-content">
-                <h2 class="welcome-message" id="welcomeMessage">Welcome!</h2>
-                
-                <!-- User Stats Section -->
-                <div class="user-stats-row">
-                    <div class="stat-card">
-                        <span class="stat-icon">⭐</span>
-                        <div class="stat-info">
-                            <span class="stat-value" id="totalPoints">0</span>
-                            <span class="stat-label">Points</span>
-                        </div>
-                    </div>
-                    <div class="stat-card">
-                        <span class="stat-icon">🔥</span>
-                        <div class="stat-info">
-                            <span class="stat-value" id="currentStreak">0</span>
-                            <span class="stat-label">Streak</span>
-                        </div>
-                    </div>
-                    <div class="stat-card">
-                        <span class="stat-icon">🏆</span>
-                        <div class="stat-info">
-                            <span class="stat-value" id="userRank">#1</span>
-                            <span class="stat-label">Rank</span>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Module Grid with Colorful Tiles -->
-                <div class="module-grid">
-                    <button class="module-card gradient-pink" data-module="flashcards">
-                        <div class="module-icon">📚</div>
-                        <h3 class="module-title">Flashcards</h3>
-                        <p class="module-desc">Learn letters A-Z</p>
-                    </button>
-                    
-                    <button class="module-card gradient-blue" data-module="soundout">
-                        <div class="module-icon">🔊</div>
-                        <h3 class="module-title">Sound It Out</h3>
-                        <p class="module-desc">Blend phonemes</p>
-                    </button>
-                    
-                    <button class="module-card gradient-green" data-module="monster">
-                        <div class="module-icon">👾</div>
-                        <h3 class="module-title">Hungry Monster</h3>
-                        <p class="module-desc">Feed the monster!</p>
-                    </button>
-                    
-                    <button class="module-card gradient-purple" data-module="pairs">
-                        <div class="module-icon">🎯</div>
-                        <h3 class="module-title">Minimal Pairs</h3>
-                        <p class="module-desc">Sort sounds</p>
-                    </button>
-                </div>
-                
-                <!-- Skills & Achievements -->
-                <div class="skills-section">
-                    <h3 class="section-title">🏅 Skills Earned</h3>
-                    <div class="skills-grid" id="skillsGrid">
-                        <!-- Skills will be populated by JS -->
-                        <div class="skill-badge locked">🔤 ABC Master</div>
-                        <div class="skill-badge locked">🔊 Sound Pro</div>
-                        <div class="skill-badge locked">👾 Monster Tamer</div>
-                        <div class="skill-badge locked">🎯 Pair Expert</div>
-                    </div>
-                </div>
-                
-                <!-- Leaderboard Preview -->
-                <div class="leaderboard-section">
-                    <h3 class="section-title">🏆 Leaderboard</h3>
-                    <div class="leaderboard-preview" id="leaderboardPreview">
-                        <!-- Leaderboard will be populated by JS -->
-                    </div>
-                </div>
+            <div class="stat-card">
+              <span class="stat-icon">🏅</span>
+              <span class="stat-value" id="achievementsCount">0</span>
+              <span class="stat-label">Badges</span>
             </div>
-        </div>
-
-        <!-- Flashcards Screen -->
-        <div class="screen hidden" id="flashcardsScreen">
-            <header class="header">
-                <button class="home-btn back-btn" aria-label="Back to menu">
-                    <svg class="home-icon" viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/>
-                    </svg>
-                </button>
-                <span class="brand-name">SoundSteps <span class="sparkle">✨</span></span>
-            </header>
-
-            <div class="flashcard-content">
-                <h1 class="page-title">Flashcards</h1>
-                
-                <div class="card animate" id="flashcard">
-                    <div class="letter-display">
-                        <span class="letter-upper" id="letterUpper">A</span>
-                        <span class="letter-lower" id="letterLower">a</span>
-                    </div>
-                    
-                    <div class="image-container">
-                        <img 
-                            id="cardImage" 
-                            src="/assets/images/apple.webp" 
-                            alt="Apple"
-                            class="card-image"
-                            loading="lazy"
-                        >
-                    </div>
-                    
-                    <div class="word-label" id="wordLabel">Apple</div>
-                    
-                    <button class="play-sound-btn" id="playSoundBtn" aria-label="Play sound">
-                        <svg class="sound-icon" viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02z"/>
-                        </svg>
-                    </button>
-                </div>
-                
-                <div class="card-controls">
-                    <button class="btn btn-secondary" id="prevCardBtn">← Previous</button>
-                    
-                    <span class="card-index" id="cardIndex">1 / 5</span>
-                    
-                    <button class="btn btn-secondary" id="nextCardBtn">Next →</button>
-                </div>
+            <div class="stat-card">
+              <span class="stat-icon">🔥</span>
+              <span class="stat-value" id="currentStreak">0</span>
+              <span class="stat-label">Streak</span>
             </div>
-        </div>
+          </div>
 
-        <!-- Sound It Out Screen -->
-        <div class="screen hidden" id="soundoutScreen">
-            <header class="header">
-                <button class="home-btn back-btn" aria-label="Back to menu">
-                    <svg class="home-icon" viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/>
-                    </svg>
-                </button>
-                <span class="brand-name">SoundSteps <span class="sparkle">✨</span></span>
-            </header>
+          <!-- Module Grid with Colorful Tiles -->
+          <div class="module-grid">
+            <button class="module-card gradient-pink" data-module="flashcards">
+              <div class="module-icon">📚</div>
+              <h3 class="module-title">Flashcards</h3>
+              <p class="module-desc">Learn letters A-Z</p>
+            </button>
 
-            <div class="soundout-content">
-                <h1 class="page-title">Sound It Out</h1>
-                
-                <div class="card">
-                    <div class="word-display" id="soundoutWord">cat</div>
-                    
-                    <div class="image-container">
-                        <img 
-                            id="soundoutImage" 
-                            src="/assets/images/cat.webp" 
-                            alt="Cat"
-                            class="card-image"
-                        >
-                    </div>
-                    
-                    <div class="phoneme-display" id="phonemeDisplay">
-                        <span class="phoneme">c</span>
-                        <span class="phoneme">a</span>
-                        <span class="phoneme">t</span>
-                    </div>
-                    
-                    <div class="slider-container">
-                        <label class="slider-label">
-                            <span>Segmented</span>
-                            <span>Blended</span>
-                        </label>
-                        <input 
-                            type="range" 
-                            id="blendSlider" 
-                            min="0" 
-                            max="100" 
-                            value="0"
-                            class="blend-slider"
-                        >
-                    </div>
-                    
-                    <div class="sound-buttons">
-                        <button class="btn btn-primary" id="playBlendBtn">
-                            🔊 Play Sound
-                        </button>
-                        <button class="btn btn-mic" id="micPracticeBtn">
-                            🎤 Practice
-                        </button>
-                    </div>
-                    
-                    <div class="speech-feedback" id="speechFeedback"></div>
-                </div>
-                
-                <div class="navigation-controls">
-                    <button class="btn btn-secondary" id="prevWordBtn">← Previous</button>
-                    <span id="wordProgress">1 / 5</span>
-                    <button class="btn btn-secondary" id="nextWordBtn">Next →</button>
-                </div>
+            <button class="module-card gradient-blue" data-module="soundout">
+              <div class="module-icon">🔊</div>
+              <h3 class="module-title">Sound It Out</h3>
+              <p class="module-desc">Blend phonemes</p>
+            </button>
+
+            <button class="module-card gradient-purple" data-module="pairs">
+              <div class="module-icon">🎯</div>
+              <h3 class="module-title">Minimal Pairs</h3>
+              <p class="module-desc">Sort sounds</p>
+            </button>
+
+            <button
+              class="module-card gradient-orange"
+              data-module="mouthMoves"
+            >
+              <div class="module-icon">👄</div>
+              <h3 class="module-title">Mouth Moves</h3>
+              <p class="module-desc">Shape your sounds</p>
+            </button>
+
+            <button
+              class="module-card gradient-teal"
+              data-module="homophoneQuiz"
+            >
+              <div class="module-icon">🖼️</div>
+              <h3 class="module-title">Homophone Quiz</h3>
+              <p class="module-desc">Match words to pictures</p>
+            </button>
+
+            <button class="module-card gradient-green" data-module="monster">
+              <div class="module-icon">👾</div>
+              <h3 class="module-title">Hungry Monster</h3>
+              <p class="module-desc">Feed the monster!</p>
+            </button>
+          </div>
+
+          <!-- Skills & Achievements -->
+          <div class="skills-section">
+            <h3 class="section-title">🏅 Skills Earned</h3>
+            <div class="skills-grid" id="skillsGrid">
+              <!-- Skills/achievements will be populated by JS -->
             </div>
-        </div>
+          </div>
 
-        <!-- Hungry Monster Game Screen -->
-        <div class="screen hidden" id="monsterScreen">
-            <header class="header">
-                <button class="home-btn back-btn" aria-label="Back to menu">
-                    <svg class="home-icon" viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/>
-                    </svg>
-                </button>
-                <span class="brand-name">SoundSteps <span class="sparkle">✨</span></span>
-            </header>
-
-            <div class="game-content">
-                <h1 class="page-title">Hungry Monster</h1>
-                
-                <div class="monster-container">
-                    <div class="monster-avatar" id="monsterAvatar">
-                        <span class="monster-emoji">👾</span>
-                    </div>
-                    
-                    <div class="speech-bubble" id="monsterQuestion">
-                        <span class="speech-text" id="monsterSpeechText">I'm hungry! Feed me something...</span>
-                    </div>
-                </div>
-                
-                <div class="options-grid" id="monsterOptions">
-                    <!-- Options will be dynamically inserted -->
-                </div>
-                
-                <div class="game-feedback hidden" id="gameFeedback">
-                    <div class="feedback-content"></div>
-                </div>
-                
-                <div class="game-progress">
-                    <span id="gameProgress">Question 1 / 6</span>
-                    <span id="gameScore">Score: 0</span>
-                </div>
+          <!-- Leaderboard Preview -->
+          <div class="leaderboard-section">
+            <h3 class="section-title">🏆 Leaderboard</h3>
+            <div class="leaderboard-preview" id="leaderboardPreview">
+              <!-- Leaderboard will be populated by JS -->
             </div>
-            
-            <!-- Confetti canvas for celebration -->
-            <canvas id="confettiCanvas" class="confetti-canvas"></canvas>
+          </div>
         </div>
+      </div>
 
-        <!-- Minimal Pairs Screen -->
-        <div class="screen hidden" id="pairsScreen">
-            <header class="header">
-                <button class="home-btn back-btn" aria-label="Back to menu">
-                    <svg class="home-icon" viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/>
-                    </svg>
-                </button>
-                <span class="brand-name">SoundSteps <span class="sparkle">✨</span></span>
-            </header>
+      <!-- Flashcards Screen -->
+      <div class="screen hidden" id="flashcardsScreen">
+        <header class="header">
+          <button class="home-btn back-btn" aria-label="Back to menu">
+            <svg class="home-icon" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z" />
+            </svg>
+          </button>
+          <span class="brand-name"
+            >SoundSteps <span class="sparkle">✨</span></span
+          >
+        </header>
 
-            <div class="pairs-content">
-                <h1 class="page-title">Minimal Pairs</h1>
-                <p class="pairs-instruction" id="pairsCategory">Sort: /p/ vs /b/</p>
-                
-                <div class="sorting-area" id="sortingArea">
-                    <!-- Drop zones will be dynamically created -->
-                </div>
-                
-                <div class="words-to-sort" id="wordsToSort">
-                    <!-- Words will be dynamically inserted -->
-                </div>
-                
-                <div class="pairs-feedback hidden" id="pairsFeedback"></div>
-                
-                <button class="btn btn-primary" id="checkPairsBtn">Check Answers</button>
+        <div class="flashcard-content">
+          <h1 class="page-title">Flashcards</h1>
+
+          <div class="card animate" id="flashcard">
+            <div class="letter-display">
+              <span class="letter-upper" id="letterUpper">A</span>
+              <span class="letter-lower" id="letterLower">a</span>
+              <button
+                class="play-phoneme-btn"
+                id="playPhonemeBtn"
+                aria-label="Play letter sound"
+                title="Hear the letter sound"
+              >
+                <svg class="sound-icon" viewBox="0 0 24 24" fill="currentColor">
+                  <path
+                    d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02z"
+                  />
+                </svg>
+              </button>
             </div>
+
+            <div class="image-container">
+              <img
+                id="cardImage"
+                src="/assets/images/apple.webp"
+                alt="Apple"
+                class="card-image"
+                loading="lazy"
+              />
+            </div>
+
+            <div class="word-sound-container">
+              <div class="word-label" id="wordLabel">Apple</div>
+              <button
+                class="play-sound-btn"
+                id="playSoundBtn"
+                aria-label="Play word sound"
+                title="Hear the word"
+              >
+                <svg class="sound-icon" viewBox="0 0 24 24" fill="currentColor">
+                  <path
+                    d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02z"
+                  />
+                </svg>
+              </button>
+            </div>
+          </div>
+
+          <div class="card-controls">
+            <button class="btn btn-secondary" id="prevCardBtn">
+              ← Previous
+            </button>
+
+            <span class="card-index" id="cardIndex">1 / 5</span>
+
+            <button class="btn btn-secondary" id="nextCardBtn">Next →</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sound It Out Screen -->
+      <div class="screen hidden" id="soundoutScreen">
+        <header class="header">
+          <button class="home-btn back-btn" aria-label="Back to menu">
+            <svg class="home-icon" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z" />
+            </svg>
+          </button>
+          <span class="brand-name"
+            >SoundSteps <span class="sparkle">✨</span></span
+          >
+        </header>
+
+        <div class="soundout-content">
+          <h1 class="page-title">Sound It Out</h1>
+          <p class="module-subtitle">Sound out this word, then say it fast!</p>
+
+          <div class="card">
+            <div class="word-display" id="soundoutWord">cat</div>
+
+            <div class="image-container">
+              <img
+                id="soundoutImage"
+                src="/assets/images/cat.webp"
+                alt="Cat"
+                class="card-image"
+              />
+            </div>
+
+            <div class="phoneme-display" id="phonemeDisplay">
+              <span class="phoneme">c</span>
+              <span class="phoneme">a</span>
+              <span class="phoneme">t</span>
+            </div>
+
+            <div class="slider-container enhanced-slider">
+              <input
+                type="range"
+                id="blendSlider"
+                min="0"
+                max="100"
+                value="0"
+                class="blend-slider enhanced"
+              />
+              <div class="slider-fill" id="sliderFill"></div>
+            </div>
+
+            <div class="sound-buttons">
+              <button class="btn btn-primary" id="playBlendBtn">
+                🔊 Play Sound
+              </button>
+              <button class="btn btn-mic" id="micPracticeBtn">
+                🎤 Practice
+              </button>
+            </div>
+
+            <div class="speech-feedback" id="speechFeedback"></div>
+          </div>
+
+          <div class="navigation-controls">
+            <button class="btn btn-secondary" id="prevWordBtn">
+              ← Previous
+            </button>
+            <span id="wordProgress">1 / 5</span>
+            <button class="btn btn-secondary" id="nextWordBtn">Next →</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Hungry Monster Game Screen -->
+      <div class="screen hidden" id="monsterScreen">
+        <header class="header">
+          <button class="home-btn back-btn" aria-label="Back to menu">
+            <svg class="home-icon" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z" />
+            </svg>
+          </button>
+          <span class="brand-name"
+            >SoundSteps <span class="sparkle">✨</span></span
+          >
+        </header>
+
+        <div class="game-content">
+          <h1 class="page-title">Hungry Monster</h1>
+
+          <div class="monster-container">
+            <div class="monster-avatar" id="monsterAvatar">
+              <span class="monster-emoji">👾</span>
+            </div>
+
+            <div class="speech-bubble" id="monsterQuestion">
+              <span class="speech-text" id="monsterSpeechText"
+                >I'm hungry! Feed me something...</span
+              >
+            </div>
+          </div>
+
+          <div class="options-grid" id="monsterOptions">
+            <!-- Options will be dynamically inserted -->
+          </div>
+
+          <div class="game-feedback hidden" id="gameFeedback">
+            <div class="feedback-content"></div>
+          </div>
+
+          <div class="game-progress">
+            <span id="gameProgress">Question 1 / 6</span>
+            <span id="gameScore">Score: 0</span>
+          </div>
         </div>
 
-        <!-- Loading Indicator -->
-        <div class="loading hidden" id="loadingIndicator">
-            <div class="spinner"></div>
-            <p>Loading...</p>
+        <!-- Confetti canvas for celebration -->
+        <canvas id="confettiCanvas" class="confetti-canvas"></canvas>
+      </div>
+
+      <!-- Minimal Pairs Screen -->
+      <div class="screen hidden" id="pairsScreen">
+        <header class="header">
+          <button class="home-btn back-btn" aria-label="Back to menu">
+            <svg class="home-icon" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z" />
+            </svg>
+          </button>
+          <span class="brand-name"
+            >SoundSteps <span class="sparkle">✨</span></span
+          >
+          <button
+            class="help-btn"
+            id="pairsTutorialBtn"
+            aria-label="Show tutorial"
+          >
+            <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20">
+              <path
+                d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 17h-2v-2h2v2zm2.07-7.75l-.9.92C13.45 12.9 13 13.5 13 15h-2v-.5c0-1.1.45-2.1 1.17-2.83l1.24-1.26c.37-.36.59-.86.59-1.41 0-1.1-.9-2-2-2s-2 .9-2 2H8c0-2.21 1.79-4 4-4s4 1.79 4 4c0 .88-.36 1.68-.93 2.25z"
+              />
+            </svg>
+          </button>
+        </header>
+
+        <!-- Interactive Tutorial Overlay -->
+        <div class="interactive-tutorial hidden" id="pairsTutorial">
+          <!-- Dimmed overlay with spotlight cutout -->
+          <div class="tutorial-dim-overlay" id="tutorialDimOverlay"></div>
+
+          <!-- Spotlight highlight -->
+          <div class="tutorial-spotlight" id="tutorialSpotlight"></div>
+
+          <!-- Arrow indicator -->
+          <div class="tutorial-arrow" id="tutorialArrow">
+            <svg viewBox="0 0 24 24" width="40" height="40" fill="#FFD700">
+              <path
+                d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"
+              />
+            </svg>
+          </div>
+
+          <!-- Message tooltip -->
+          <div class="tutorial-message" id="tutorialMessage">
+            <div class="message-content">
+              <span class="message-step">Step 1/4</span>
+              <p class="message-text" id="tutorialText">
+                Click this button to hear the sound
+              </p>
+              <div class="message-hint" id="tutorialHint">
+                👆 Click to continue
+              </div>
+            </div>
+          </div>
+
+          <!-- Skip button (always visible) -->
+          <button class="tutorial-skip-btn" id="skipInteractiveTutorial">
+            Skip Tutorial ✕
+          </button>
+
+          <!-- Don't show again checkbox -->
+          <label class="tutorial-dont-show" id="tutorialDontShow">
+            <input type="checkbox" id="dontShowInteractive" />
+            <span>Don't show again</span>
+          </label>
         </div>
 
+        <div class="pairs-content">
+          <h1 class="page-title">Minimal Pairs</h1>
+          <p class="pairs-instruction" id="pairsCategory">Sort: /p/ vs /b/</p>
+
+          <div class="sorting-area" id="sortingArea">
+            <!-- Drop zones will be dynamically created -->
+          </div>
+
+          <div class="words-to-sort" id="wordsToSort">
+            <!-- Words will be dynamically inserted -->
+          </div>
+
+          <div class="pairs-feedback hidden" id="pairsFeedback"></div>
+
+          <button class="btn btn-primary" id="checkPairsBtn">
+            Check Answers
+          </button>
+        </div>
+      </div>
+
+      <!-- Mouth Moves Screen -->
+      <div class="screen hidden" id="mouthMovesScreen">
+        <header class="header">
+          <button class="home-btn back-btn" aria-label="Back to menu">
+            <svg class="home-icon" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z" />
+            </svg>
+          </button>
+          <span class="brand-name"
+            >SoundSteps <span class="sparkle">✨</span></span
+          >
+        </header>
+
+        <!-- Mouth Moves Intro Popup -->
+        <div class="mouth-intro-overlay hidden" id="mouthIntroOverlay">
+          <div class="mouth-intro-popup">
+            <button
+              class="mouth-intro-close-btn"
+              id="closeMouthIntroBtn"
+              title="Skip intro"
+            >
+              ✕
+            </button>
+            <div class="intro-avatar" id="introAvatar">
+              <img
+                src="/assets/images/teacher-avatar.webp"
+                alt="Teacher"
+                class="avatar-image"
+                onerror="
+                  this.src =
+                    'data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><circle cx=%2250%22 cy=%2235%22 r=%2225%22 fill=%22%23FFD93D%22/><circle cx=%2250%22 cy=%2290%22 r=%2235%22 fill=%22%239B7FE6%22/><circle cx=%2242%22 cy=%2232%22 r=%224%22 fill=%22%23333%22/><circle cx=%2258%22 cy=%2232%22 r=%224%22 fill=%22%23333%22/><ellipse cx=%2250%22 cy=%2242%22 rx=%228%22 ry=%225%22 fill=%22%23FF6B6B%22/></svg>'
+                "
+              />
+              <div class="avatar-speech-indicator">
+                <span class="speech-dot"></span>
+                <span class="speech-dot"></span>
+                <span class="speech-dot"></span>
+              </div>
+            </div>
+            <div class="intro-content">
+              <h2 class="intro-title">👄 Mouth Moves</h2>
+              <p class="intro-message" id="introMessage">
+                Welcome! In this module, you'll learn how changing your mouth
+                shape creates different sounds. We'll practice
+                <strong>long vowels</strong> and
+                <strong>short vowels</strong> using word pairs!
+              </p>
+              <div class="intro-tips">
+                <div class="intro-tip">
+                  😊 Watch the mouth emoji for each word
+                </div>
+                <div class="intro-tip">🔊 Click to hear the difference</div>
+                <div class="intro-tip">💡 Follow the tips to say it right!</div>
+              </div>
+            </div>
+            <button class="intro-start-btn" id="startMouthMovesBtn">
+              Let's Start! 🚀
+            </button>
+          </div>
+        </div>
+
+        <div class="mouth-moves-content">
+          <h1 class="page-title">Mouth Moves</h1>
+          <p class="module-instruction" id="mouthMovesInstruction">
+            Learn how mouth position changes the sound!
+          </p>
+
+          <div class="word-pair-container" id="wordPairContainer">
+            <!-- Word pair cards will be inserted here -->
+          </div>
+
+          <div class="mouth-feedback" id="mouthFeedback"></div>
+
+          <div class="navigation-controls">
+            <button class="btn btn-secondary" id="prevMouthBtn">
+              ← Previous
+            </button>
+            <span id="mouthProgress">1 / 2</span>
+            <button class="btn btn-secondary" id="nextMouthBtn">Next →</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Homophone Quiz Screen -->
+      <div class="screen hidden" id="homophoneQuizScreen">
+        <header class="header">
+          <button class="home-btn back-btn" aria-label="Back to menu">
+            <svg class="home-icon" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z" />
+            </svg>
+          </button>
+          <span class="brand-name"
+            >SoundSteps <span class="sparkle">✨</span></span
+          >
+        </header>
+
+        <div class="homophone-quiz-content">
+          <h1 class="page-title">Homophone Quiz</h1>
+          <p class="quiz-question">Which word matches this picture?</p>
+
+          <div class="quiz-image-container">
+            <img
+              id="homophoneImage"
+              src="/assets/images/sheep.webp"
+              alt="Quiz image"
+              class="quiz-image"
+            />
+          </div>
+
+          <div class="homophone-options" id="homophoneOptions">
+            <!-- Options will be dynamically inserted -->
+          </div>
+
+          <div class="homophone-feedback hidden" id="homophoneFeedback"></div>
+
+          <div class="quiz-progress">
+            <span id="homophoneProgress">Question 1 / 6</span>
+            <span id="homophoneScore">Score: 0</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Loading Indicator -->
+      <div class="loading hidden" id="loadingIndicator">
+        <div class="spinner"></div>
+        <p>Loading...</p>
+      </div>
     </main>
-</body>
+  </body>
 </html>
