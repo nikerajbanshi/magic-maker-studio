@@ -1,6 +1,6 @@
 # SoundSteps / Magic Maker Studio - Dockerfile
-# Full-stack container for the phonics learning platform
-# Deploy to: user1@192.168.1.140:/home/user1/projects/soundsteps/
+# Team1 (user1) - Phonics Learning Platform
+# Domain: https://team1.cbit.site | Port: 8001
 
 FROM python:3.11-slim
 
@@ -35,13 +35,14 @@ USER appuser
 ENV PYTHONPATH=/app/backend
 ENV PYTHONDONTWRITEBYTECODE=1
 ENV PYTHONUNBUFFERED=1
+ENV PORT=8001
 
-# Expose port
-EXPOSE 8000
+# Expose Team1's assigned port
+EXPOSE 8001
 
-# Health check
+# Health check on port 8001
 HEALTHCHECK --interval=30s --timeout=10s --start-period=15s --retries=3 \
-    CMD curl -f http://localhost:8000/health || exit 1
+    CMD curl -f http://localhost:8001/health || exit 1
 
-# Run the application with 4 workers for production
-CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "8000", "--workers", "4"]
+# CRITICAL: Bind to 0.0.0.0 (required for Docker/NGINX routing)
+CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "8001", "--workers", "4"]
